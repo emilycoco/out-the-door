@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		381156D51B9B790D00DD2447 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 381156D41B9B790D00DD2447 /* CoreLocation.framework */; };
 		382D6A1C1B924E4800055A81 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 382D6A1B1B924E4800055A81 /* main.m */; };
 		382D6A1F1B924E4800055A81 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 382D6A1E1B924E4800055A81 /* AppDelegate.m */; };
 		382D6A221B924E4800055A81 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 382D6A211B924E4800055A81 /* ViewController.m */; };
@@ -14,6 +15,8 @@
 		382D6A271B924E4800055A81 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 382D6A261B924E4800055A81 /* Images.xcassets */; };
 		382D6A2A1B924E4800055A81 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 382D6A281B924E4800055A81 /* LaunchScreen.xib */; };
 		382D6A361B924E4800055A81 /* Out_The_DoorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 382D6A351B924E4800055A81 /* Out_The_DoorTests.m */; };
+		38AACCAB1B9E3557004B49C3 /* locationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 38AACCAA1B9E3557004B49C3 /* locationManager.m */; };
+		38AACCAD1B9E3665004B49C3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38AACCAC1B9E3665004B49C3 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		381156D41B9B790D00DD2447 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		382D6A161B924E4800055A81 /* Out The Door.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Out The Door.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		382D6A1A1B924E4800055A81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		382D6A1B1B924E4800055A81 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +44,9 @@
 		382D6A2F1B924E4800055A81 /* Out The DoorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Out The DoorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		382D6A341B924E4800055A81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		382D6A351B924E4800055A81 /* Out_The_DoorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Out_The_DoorTests.m; sourceTree = "<group>"; };
+		38AACCA91B9E354E004B49C3 /* locationManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = locationManager.h; sourceTree = "<group>"; };
+		38AACCAA1B9E3557004B49C3 /* locationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = locationManager.m; sourceTree = "<group>"; };
+		38AACCAC1B9E3665004B49C3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +54,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38AACCAD1B9E3665004B49C3 /* MapKit.framework in Frameworks */,
+				381156D51B9B790D00DD2447 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +72,8 @@
 		382D6A0D1B924E4700055A81 = {
 			isa = PBXGroup;
 			children = (
+				38AACCAC1B9E3665004B49C3 /* MapKit.framework */,
+				381156D41B9B790D00DD2447 /* CoreLocation.framework */,
 				382D6A181B924E4800055A81 /* Out The Door */,
 				382D6A321B924E4800055A81 /* Out The DoorTests */,
 				382D6A171B924E4800055A81 /* Products */,
@@ -81,6 +92,8 @@
 		382D6A181B924E4800055A81 /* Out The Door */ = {
 			isa = PBXGroup;
 			children = (
+				38AACCA91B9E354E004B49C3 /* locationManager.h */,
+				38AACCAA1B9E3557004B49C3 /* locationManager.m */,
 				382D6A1D1B924E4800055A81 /* AppDelegate.h */,
 				382D6A1E1B924E4800055A81 /* AppDelegate.m */,
 				382D6A201B924E4800055A81 /* ViewController.h */,
@@ -219,6 +232,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38AACCAB1B9E3557004B49C3 /* locationManager.m in Sources */,
 				382D6A221B924E4800055A81 /* ViewController.m in Sources */,
 				382D6A1F1B924E4800055A81 /* AppDelegate.m in Sources */,
 				382D6A1C1B924E4800055A81 /* main.m in Sources */,
@@ -416,6 +430,7 @@
 				382D6A3B1B924E4800055A81 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		382D6A3C1B924E4800055A81 /* Build configuration list for PBXNativeTarget "Out The DoorTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +439,7 @@
 				382D6A3E1B924E4800055A81 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

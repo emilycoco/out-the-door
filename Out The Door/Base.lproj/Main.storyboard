@@ -1,25 +1,180 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Vfg-QE-N72">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="tNm-da-qXL">
+            <objects>
+                <navigationController id="Vfg-QE-N72" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dnS-hI-NGG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="egp-ac-oTg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CLe-lJ-MAJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-478.5" y="221.5"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time to get out the door!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpS-7l-9gs">
+                                <rect key="frame" x="70" y="141" width="235" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="235" id="q3r-Ym-I8V"/>
+                                    <constraint firstAttribute="height" constant="21" id="zmd-pT-UUu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="9sd-E8-SLa">
+                                <rect key="frame" x="65" y="281" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="kI6-hb-Ujt"/>
+                                    <constraint firstAttribute="width" constant="240" id="q4t-Uq-Hnt"/>
+                                    <constraint firstAttribute="width" secondItem="9sd-E8-SLa" secondAttribute="height" multiplier="1:1" id="vOV-BT-uhe"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="kI6-hb-Ujt"/>
+                                    </mask>
+                                </variation>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x1C-wq-f5G">
+                                <rect key="frame" x="161" y="170" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9sd-E8-SLa" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" id="1Zx-sQ-VBG"/>
+                            <constraint firstAttribute="centerY" secondItem="x1C-wq-f5G" secondAttribute="centerY" constant="153.25" id="3za-Mb-YTU"/>
+                            <constraint firstItem="cpS-7l-9gs" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="77" id="HnA-Pg-8rM"/>
+                            <constraint firstAttribute="centerX" secondItem="cpS-7l-9gs" secondAttribute="centerX" id="St8-eM-hSb"/>
+                            <constraint firstAttribute="centerX" secondItem="9sd-E8-SLa" secondAttribute="centerX" constant="2.5" id="WI7-St-on4"/>
+                            <constraint firstAttribute="centerX" secondItem="x1C-wq-f5G" secondAttribute="centerX" constant="-92" id="Z0Z-ZK-swH"/>
+                            <constraint firstAttribute="centerY" secondItem="x1C-wq-f5G" secondAttribute="centerY" constant="172" id="gAT-S2-CWv"/>
+                            <constraint firstAttribute="centerY" secondItem="9sd-E8-SLa" secondAttribute="centerY" constant="-67.5" id="ife-FV-iSd"/>
+                            <constraint firstAttribute="centerX" secondItem="x1C-wq-f5G" secondAttribute="centerX" constant="5.5" id="nFb-c1-iAK"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Z0Z-ZK-swH"/>
+                                <exclude reference="gAT-S2-CWv"/>
+                                <exclude reference="1Zx-sQ-VBG"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="si8-gh-EFr">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="ufz-Rp-mn5">
+                            <connections>
+                                <segue destination="ohR-xW-TZg" kind="presentation" id="zcX-WA-0mI"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="homeMapView" destination="9sd-E8-SLa" id="7hy-ix-P9u"/>
+                        <outlet property="latitudeLabel" destination="x1C-wq-f5G" id="MtL-Gk-7V1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-53.5" y="221.5"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="3oS-1F-7mn">
+            <objects>
+                <viewController id="ohR-xW-TZg" customClass="settingsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RNT-fU-n5r"/>
+                        <viewControllerLayoutGuide type="bottom" id="IWo-q3-40J"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lHL-Zu-N4K">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TUb-UB-tk0">
+                                <rect key="frame" x="159" y="28" width="90" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="MOc-eO-Xx7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGm-Ar-ueh">
+                                <rect key="frame" x="109" y="120" width="157" height="30"/>
+                                <state key="normal" title="Add Current Location">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addNewLocation:" destination="ohR-xW-TZg" eventType="touchUpInside" id="6GY-GP-IwT"/>
+                                </connections>
+                            </button>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AZT-PC-eHd">
+                                <rect key="frame" x="67" y="209" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="eAi-K1-lba"/>
+                                    <constraint firstAttribute="width" secondItem="AZT-PC-eHd" secondAttribute="height" multiplier="1:1" id="gAM-DX-peM"/>
+                                    <constraint firstAttribute="height" constant="240" id="hYs-ym-tGd"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="hYs-ym-tGd"/>
+                                    </mask>
+                                </variation>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AZT-PC-eHd" firstAttribute="top" secondItem="gGm-Ar-ueh" secondAttribute="bottom" constant="59" id="6oq-Rx-SpZ"/>
+                            <constraint firstItem="gGm-Ar-ueh" firstAttribute="top" secondItem="lHL-Zu-N4K" secondAttribute="top" constant="120" id="EGm-TP-xR4"/>
+                            <constraint firstAttribute="centerX" secondItem="AZT-PC-eHd" secondAttribute="centerX" id="Rcw-SO-I9J"/>
+                            <constraint firstItem="gGm-Ar-ueh" firstAttribute="leading" secondItem="lHL-Zu-N4K" secondAttribute="leadingMargin" constant="93" id="TMA-7A-SmT"/>
+                            <constraint firstItem="AZT-PC-eHd" firstAttribute="width" secondItem="AZT-PC-eHd" secondAttribute="height" multiplier="1:1" id="dM4-ym-LfZ"/>
+                            <constraint firstItem="gGm-Ar-ueh" firstAttribute="centerX" secondItem="AZT-PC-eHd" secondAttribute="centerX" id="ekc-n1-qS2"/>
+                            <constraint firstItem="TUb-UB-tk0" firstAttribute="leading" secondItem="lHL-Zu-N4K" secondAttribute="leading" constant="159" id="kgz-t4-Kdw"/>
+                            <constraint firstItem="TUb-UB-tk0" firstAttribute="top" secondItem="RNT-fU-n5r" secondAttribute="bottom" constant="8" symbolic="YES" id="m8A-5y-kRS"/>
+                            <constraint firstItem="gGm-Ar-ueh" firstAttribute="top" secondItem="TUb-UB-tk0" secondAttribute="bottom" constant="71" id="rOk-wc-p6Y"/>
+                            <constraint firstAttribute="centerX" secondItem="AZT-PC-eHd" secondAttribute="centerX" constant="-11.5" id="sS7-NK-am1"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="dM4-ym-LfZ"/>
+                                <exclude reference="sS7-NK-am1"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="locationMapView" destination="AZT-PC-eHd" id="JHb-g2-3hx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nd1-le-dBb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="366.5" y="221.5"/>
         </scene>
     </scenes>
 </document>

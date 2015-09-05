@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
+#import "locationManager.h"
 
 @interface ViewController : UIViewController
-
 
 @end
 

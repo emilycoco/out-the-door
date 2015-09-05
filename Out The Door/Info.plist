@@ -4,6 +4,8 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
+	<key>CFBundleDisplayName</key>
+	<string></string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -20,8 +22,22 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>MGLMapboxAccessToken</key>
+	<string>pk.eyJ1IjoibWFyb29uY2FyZG9vbiIsImEiOiIwMTk2NTU3NWRhZGNlNjVjMGYwZGM1YTFhNDAzNWMwYyJ9.fy63KhJoiauJ8N0ODXJcRQ</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Allow to use location always</string>
+	<key>NSLocationUsageDescription</key>
+	<string>privacy</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>description</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>location</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
