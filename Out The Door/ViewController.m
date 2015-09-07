@@ -8,13 +8,17 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+@interface ViewController () <MGLMapViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *latitudeLabel;
 
 @property (weak, nonatomic) IBOutlet CLRegion *homeGeofence;
 
-@property (weak, nonatomic) IBOutlet MKMapView *homeMapView;
+@property (nonatomic) MGLMapView *homeMapView;
+
+@property (weak, nonatomic) IBOutlet UIView *mapContainer;
+
+@property (nonatomic) CLLocationCoordinate2D recentLocation;
 
 @end
 
@@ -24,16 +28,31 @@
     [super viewDidLoad];
     [[LocationManager sharedInstance] setDelegate:self];
     [[LocationManager sharedInstance] checkUserPermissionForLocation];
-    NSDictionary *currentLocation = [[NSUserDefaults standardUserDefaults] objectForKey:@"homeLocations"];
-    CGPoint recentLocation = CGPointMake(38, -122);
-    [self.homeMapView setCenter:recentLocation];
+    NSDictionary *homeLocation = [[NSUserDefaults standardUserDefaults] objectForKey:@"homeLocations"][4];
+    self.recentLocation = CLLocationCoordinate2DMake([[homeLocation valueForKey:@"lat"] floatValue], [[homeLocation valueForKey:@"lon"] floatValue]);
 
-    float spanX = 0.00725;
-    float spanY = 0.00725;
-    MKCoordinateRegion* region;
-//    region.span.latitudeDelta = spanX;
-//    region.span.longitudeDelta = spanY;
-    NSLog(@"blah%@", currentLocation);
+    // initialize the map view
+    self.homeMapView = [[MGLMapView alloc] initWithFrame:self.mapContainer.bounds];
+    self.homeMapView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+
+    // set the map's center coordinate
+    [self.homeMapView setCenterCoordinate:self.recentLocation
+                            zoomLevel:15
+                             animated:NO];
+    
+    [self.mapContainer addSubview:self.homeMapView];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+
+    MGLPointAnnotation *point = [[MGLPointAnnotation alloc] init];
+    point.coordinate = self.recentLocation;
+    point.title = @"Hello world!";
+    point.subtitle = @"Welcome to The Ellipse.";
+
+    // Add annotation `point` to the map
+    [self.homeMapView addAnnotation:point];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -42,20 +61,8 @@
 }
 
 - (void)locationControllerDidUpdateLocation:(CLLocation  *)location {
-    [self zoomToCurrentLocation];
-}
 
-- (void)zoomToCurrentLocation {
-    float spanX = 0.00025;
-    float spanY = 0.00025;
-    MKCoordinateRegion region;
-    region.center.latitude = self.homeMapView.userLocation.coordinate.latitude;
-    region.center.longitude = self.homeMapView.userLocation.coordinate.longitude;
-    region.span.latitudeDelta = spanX;
-    region.span.longitudeDelta = spanY;
-    [self.homeMapView setRegion:region];
 }
-
 
 //-(CLRegion *)regionFromLocation:(CLLocation *)location {
 //    CLLocationCoordinate2D center = CLLocationCoordinate2DMake(location.coordinate.latitude,

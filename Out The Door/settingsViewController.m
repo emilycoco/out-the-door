@@ -8,23 +8,47 @@
 
 #import "settingsViewController.h"
 
+@interface settingsViewController () <MGLMapViewDelegate>
+
+@property (nonatomic) MGLMapView *homeMapView;
+
+@property (weak, nonatomic) IBOutlet UIView *mapContainer;
+
+@property (nonatomic) CLLocationCoordinate2D recentLocation;
+
+@end
+
 @implementation settingsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [[LocationManager sharedInstance]setDelegate:self];
     [[LocationManager sharedInstance].locationManager startUpdatingLocation];
+    NSDictionary *homeLocation = [[NSUserDefaults standardUserDefaults] objectForKey:@"homeLocations"][4];
+    self.recentLocation = CLLocationCoordinate2DMake([[homeLocation valueForKey:@"lat"] floatValue], [[homeLocation valueForKey:@"lon"] floatValue]);
+
+    // initialize the map view
+    self.homeMapView = [[MGLMapView alloc] initWithFrame:self.mapContainer.bounds];
+    self.homeMapView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+
+    // set the map's center coordinate
+    [self.homeMapView setCenterCoordinate:self.recentLocation
+                                zoomLevel:30
+                                 animated:NO];
+
+    [self.mapContainer addSubview:self.homeMapView];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
 
-
 - (IBAction)addNewLocation:(id)sender {
     NSNumber *lat = [NSNumber numberWithDouble:[[LocationManager sharedInstance] currentLocation].coordinate.latitude];
     NSNumber *lon = [NSNumber numberWithDouble:[[LocationManager sharedInstance] currentLocation].coordinate.longitude];
-    NSDictionary *currentLocation=@{@"lat":lat,@"long":lon};
+    NSDictionary *currentLocation= [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                                     lat, @"lat",
+                                     lon, @"lon", nil];
 
     NSMutableArray *homeLocations = [[NSMutableArray alloc] init];
     if ([[NSUserDefaults standardUserDefaults] objectForKey:@"homeLocations"]) {
@@ -36,18 +60,11 @@
 }
 
 - (void)locationControllerDidUpdateLocation:(CLLocation *)location {
-    [self zoomToCurrentLocation];
+
 }
 
-- (void)zoomToCurrentLocation {
-    float spanX = 0.00025;
-    float spanY = 0.00025;
-    MKCoordinateRegion region;
-    region.center.latitude = self.locationMapView.userLocation.coordinate.latitude;
-    region.center.longitude = self.locationMapView.userLocation.coordinate.longitude;
-    region.span.latitudeDelta = spanX;
-    region.span.longitudeDelta = spanY;
-    [self.locationMapView setRegion:region];
+- (IBAction)close:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

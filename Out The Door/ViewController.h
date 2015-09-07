@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 #import "locationManager.h"
+#import "Mapbox.h"
 
 @interface ViewController : UIViewController
 
