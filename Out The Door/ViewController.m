@@ -10,8 +10,6 @@
 
 @interface ViewController () <MGLMapViewDelegate>
 
-@property (weak, nonatomic) IBOutlet UILabel *latitudeLabel;
-
 @property (weak, nonatomic) IBOutlet CLRegion *homeGeofence;
 
 @property (nonatomic) MGLMapView *homeMapView;
@@ -19,6 +17,8 @@
 @property (weak, nonatomic) IBOutlet UIView *mapContainer;
 
 @property (nonatomic) CLLocationCoordinate2D recentLocation;
+
+@property (weak, nonatomic) IBOutlet UILabel *locationLabel;
 
 @end
 
@@ -28,8 +28,9 @@
     [super viewDidLoad];
     [[LocationManager sharedInstance] setDelegate:self];
     [[LocationManager sharedInstance] checkUserPermissionForLocation];
-    NSDictionary *homeLocation = [[NSUserDefaults standardUserDefaults] objectForKey:@"homeLocations"][4];
+    NSDictionary *homeLocation = [[NSUserDefaults standardUserDefaults] objectForKey:@"homeLocations"][6];
     self.recentLocation = CLLocationCoordinate2DMake([[homeLocation valueForKey:@"lat"] floatValue], [[homeLocation valueForKey:@"lon"] floatValue]);
+    self.locationLabel.text = [NSString stringWithFormat:@"You're at %@", [homeLocation valueForKey:@"name"]];
 
     // initialize the map view
     self.homeMapView = [[MGLMapView alloc] initWithFrame:self.mapContainer.bounds];
@@ -37,7 +38,7 @@
 
     // set the map's center coordinate
     [self.homeMapView setCenterCoordinate:self.recentLocation
-                            zoomLevel:15
+                            zoomLevel:17
                              animated:NO];
     
     [self.mapContainer addSubview:self.homeMapView];

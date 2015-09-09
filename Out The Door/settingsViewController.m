@@ -16,6 +16,8 @@
 
 @property (nonatomic) CLLocationCoordinate2D recentLocation;
 
+@property (weak, nonatomic) IBOutlet UITextField *locationName;
+
 @end
 
 @implementation settingsViewController
@@ -33,7 +35,7 @@
 
     // set the map's center coordinate
     [self.homeMapView setCenterCoordinate:self.recentLocation
-                                zoomLevel:30
+                                zoomLevel:12
                                  animated:NO];
 
     [self.mapContainer addSubview:self.homeMapView];
@@ -46,7 +48,9 @@
 - (IBAction)addNewLocation:(id)sender {
     NSNumber *lat = [NSNumber numberWithDouble:[[LocationManager sharedInstance] currentLocation].coordinate.latitude];
     NSNumber *lon = [NSNumber numberWithDouble:[[LocationManager sharedInstance] currentLocation].coordinate.longitude];
+    NSString *name = self.locationName.text;
     NSDictionary *currentLocation= [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                                     name, @"name",
                                      lat, @"lat",
                                      lon, @"lon", nil];
 

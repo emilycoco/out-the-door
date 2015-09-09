@@ -46,17 +46,23 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KXA-c8-DEQ">
-                                <rect key="frame" x="66" y="293" width="250" height="250"/>
+                                <rect key="frame" x="62.5" y="293" width="250" height="250"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="KXA-c8-DEQ" secondAttribute="height" multiplier="1:1" id="9y5-GM-vIZ"/>
                                     <constraint firstAttribute="width" constant="250" id="N8z-eL-JXB"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You're at home" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jQW-JR-fUs">
+                                <rect key="frame" x="46" y="237" width="283.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="KXA-c8-DEQ" secondAttribute="centerX" constant="-3.5" id="6Bc-2e-FZr"/>
+                            <constraint firstAttribute="centerX" secondItem="KXA-c8-DEQ" secondAttribute="centerX" id="6Bc-2e-FZr"/>
                             <constraint firstItem="cpS-7l-9gs" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="77" id="HnA-Pg-8rM"/>
                             <constraint firstAttribute="centerX" secondItem="cpS-7l-9gs" secondAttribute="centerX" id="St8-eM-hSb"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="KXA-c8-DEQ" secondAttribute="bottom" constant="124" id="gMk-i5-IGX"/>
@@ -71,6 +77,7 @@
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="locationLabel" destination="jQW-JR-fUs" id="f6V-zW-kCW"/>
                         <outlet property="mapContainer" destination="KXA-c8-DEQ" id="v0z-eP-WPf"/>
                     </connections>
                 </viewController>
@@ -99,7 +106,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGm-Ar-ueh">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGm-Ar-ueh">
                                 <rect key="frame" x="109" y="120" width="157" height="30"/>
                                 <state key="normal" title="Add Current Location">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -108,19 +115,6 @@
                                     <action selector="addNewLocation:" destination="ohR-xW-TZg" eventType="touchUpInside" id="6GY-GP-IwT"/>
                                 </connections>
                             </button>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AZT-PC-eHd">
-                                <rect key="frame" x="67" y="209" width="240" height="240"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="eAi-K1-lba"/>
-                                    <constraint firstAttribute="width" secondItem="AZT-PC-eHd" secondAttribute="height" multiplier="1:1" id="gAM-DX-peM"/>
-                                    <constraint firstAttribute="height" constant="240" id="hYs-ym-tGd"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="hYs-ym-tGd"/>
-                                    </mask>
-                                </variation>
-                            </mapView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HeY-TN-TVG">
                                 <rect key="frame" x="313" y="24" width="46" height="30"/>
                                 <state key="normal" title="Close">
@@ -130,30 +124,47 @@
                                     <action selector="close:" destination="ohR-xW-TZg" eventType="touchUpInside" id="0BI-Y3-jy5"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PgL-bO-4kW">
+                                <rect key="frame" x="62.5" y="293" width="250" height="250"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="CXc-GU-rZx"/>
+                                    <constraint firstAttribute="width" secondItem="PgL-bO-4kW" secondAttribute="height" multiplier="1:1" id="Ykd-Rj-yLe"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name this location:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfT-LR-zeu">
+                                <rect key="frame" x="16" y="199" width="158" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JeK-hS-8aX">
+                                <rect key="frame" x="182" y="196" width="130.5" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="AZT-PC-eHd" firstAttribute="top" secondItem="gGm-Ar-ueh" secondAttribute="bottom" constant="59" id="6oq-Rx-SpZ"/>
                             <constraint firstItem="gGm-Ar-ueh" firstAttribute="top" secondItem="lHL-Zu-N4K" secondAttribute="top" constant="120" id="EGm-TP-xR4"/>
-                            <constraint firstAttribute="centerX" secondItem="AZT-PC-eHd" secondAttribute="centerX" id="Rcw-SO-I9J"/>
+                            <constraint firstItem="IWo-q3-40J" firstAttribute="top" secondItem="PgL-bO-4kW" secondAttribute="bottom" constant="124" id="M3h-O4-f1H"/>
                             <constraint firstItem="gGm-Ar-ueh" firstAttribute="leading" secondItem="lHL-Zu-N4K" secondAttribute="leadingMargin" constant="93" id="TMA-7A-SmT"/>
-                            <constraint firstItem="AZT-PC-eHd" firstAttribute="width" secondItem="AZT-PC-eHd" secondAttribute="height" multiplier="1:1" id="dM4-ym-LfZ"/>
-                            <constraint firstItem="gGm-Ar-ueh" firstAttribute="centerX" secondItem="AZT-PC-eHd" secondAttribute="centerX" id="ekc-n1-qS2"/>
+                            <constraint firstAttribute="centerX" secondItem="PgL-bO-4kW" secondAttribute="centerX" id="dCw-SS-6cM"/>
                             <constraint firstItem="TUb-UB-tk0" firstAttribute="leading" secondItem="lHL-Zu-N4K" secondAttribute="leading" constant="159" id="kgz-t4-Kdw"/>
                             <constraint firstItem="TUb-UB-tk0" firstAttribute="top" secondItem="RNT-fU-n5r" secondAttribute="bottom" constant="8" symbolic="YES" id="m8A-5y-kRS"/>
+                            <constraint firstItem="PgL-bO-4kW" firstAttribute="width" secondItem="PgL-bO-4kW" secondAttribute="height" multiplier="1:1" id="qk1-Ex-WRs"/>
                             <constraint firstItem="gGm-Ar-ueh" firstAttribute="top" secondItem="TUb-UB-tk0" secondAttribute="bottom" constant="71" id="rOk-wc-p6Y"/>
-                            <constraint firstAttribute="centerX" secondItem="AZT-PC-eHd" secondAttribute="centerX" constant="-11.5" id="sS7-NK-am1"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="dM4-ym-LfZ"/>
-                                <exclude reference="sS7-NK-am1"/>
+                                <exclude reference="qk1-Ex-WRs"/>
                             </mask>
                         </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="locationMapView" destination="AZT-PC-eHd" id="JHb-g2-3hx"/>
+                        <outlet property="locationName" destination="JeK-hS-8aX" id="pnc-3L-gXT"/>
+                        <outlet property="mapContainer" destination="PgL-bO-4kW" id="3go-rB-de2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nd1-le-dBb" userLabel="First Responder" sceneMemberID="firstResponder"/>
