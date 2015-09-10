@@ -9,7 +9,8 @@
 /* Begin PBXBuildFile section */
 		294EE51AB7489F39B35026EB /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B121EBDF52D96FCB40922C1 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		3800519F1B9E3B9A00C06E47 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3800519E1B9E3B9A00C06E47 /* Settings.bundle */; };
-		380051A21B9E3CE100C06E47 /* settingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 380051A11B9E3CE100C06E47 /* settingsViewController.m */; };
+		380051A21B9E3CE100C06E47 /* addLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 380051A11B9E3CE100C06E47 /* addLocationViewController.m */; };
+		380051A51B9FDAA600C06E47 /* settingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 380051A41B9FDAA600C06E47 /* settingsViewController.m */; };
 		381156D51B9B790D00DD2447 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 381156D41B9B790D00DD2447 /* CoreLocation.framework */; };
 		382D6A1C1B924E4800055A81 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 382D6A1B1B924E4800055A81 /* main.m */; };
 		382D6A1F1B924E4800055A81 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 382D6A1E1B924E4800055A81 /* AppDelegate.m */; };
@@ -35,8 +36,10 @@
 /* Begin PBXFileReference section */
 		29AE5824DF79DABE9193FDBB /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		3800519E1B9E3B9A00C06E47 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = ../../Downloads/Settings.bundle; sourceTree = "<group>"; };
-		380051A01B9E3CD600C06E47 /* settingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = settingsViewController.h; sourceTree = "<group>"; };
-		380051A11B9E3CE100C06E47 /* settingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = settingsViewController.m; sourceTree = "<group>"; };
+		380051A01B9E3CD600C06E47 /* addLocationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = addLocationViewController.h; sourceTree = "<group>"; };
+		380051A11B9E3CE100C06E47 /* addLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = addLocationViewController.m; sourceTree = "<group>"; };
+		380051A31B9FDAA600C06E47 /* settingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = settingsViewController.h; sourceTree = "<group>"; };
+		380051A41B9FDAA600C06E47 /* settingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = settingsViewController.m; sourceTree = "<group>"; };
 		381156D41B9B790D00DD2447 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		382D6A161B924E4800055A81 /* Out The Door.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Out The Door.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		382D6A1A1B924E4800055A81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -111,12 +114,14 @@
 				382D6A1E1B924E4800055A81 /* AppDelegate.m */,
 				382D6A201B924E4800055A81 /* ViewController.h */,
 				382D6A211B924E4800055A81 /* ViewController.m */,
-				380051A01B9E3CD600C06E47 /* settingsViewController.h */,
-				380051A11B9E3CE100C06E47 /* settingsViewController.m */,
+				380051A01B9E3CD600C06E47 /* addLocationViewController.h */,
+				380051A11B9E3CE100C06E47 /* addLocationViewController.m */,
 				382D6A231B924E4800055A81 /* Main.storyboard */,
 				382D6A261B924E4800055A81 /* Images.xcassets */,
 				382D6A281B924E4800055A81 /* LaunchScreen.xib */,
 				382D6A191B924E4800055A81 /* Supporting Files */,
+				380051A31B9FDAA600C06E47 /* settingsViewController.h */,
+				380051A41B9FDAA600C06E47 /* settingsViewController.m */,
 			);
 			path = "Out The Door";
 			sourceTree = "<group>";
@@ -316,11 +321,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				380051A21B9E3CE100C06E47 /* settingsViewController.m in Sources */,
+				380051A21B9E3CE100C06E47 /* addLocationViewController.m in Sources */,
 				38AACCAB1B9E3557004B49C3 /* locationManager.m in Sources */,
 				382D6A221B924E4800055A81 /* ViewController.m in Sources */,
 				382D6A1F1B924E4800055A81 /* AppDelegate.m in Sources */,
 				382D6A1C1B924E4800055A81 /* main.m in Sources */,
+				380051A51B9FDAA600C06E47 /* settingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -57,6 +57,9 @@
     [self checkUserPermissionForLocation];
 }
 
+-(void)startMonitoringForRegion:(CLRegion *)region {
+    [self.locationManager startMonitoringForRegion:region];
+}
 
 -(void)checkUserPermissionForLocation {
     switch ([CLLocationManager authorizationStatus]) {

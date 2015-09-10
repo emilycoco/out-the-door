@@ -28,4 +28,6 @@
 
 - (void)checkUserPermissionForLocation;
 
+-(void)startMonitoringForRegion:(CLRegion*)region;
+
 @end
