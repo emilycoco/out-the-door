@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "locationManager.h"
+#import "geoFenceMananger.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

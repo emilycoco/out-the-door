@@ -12,6 +12,8 @@
 
 @interface geoFenceMananger : NSObject <LocationManagerDelegate>
 
+@property (nonatomic) CLLocationCoordinate2D currentHomeLocation;
+
 @property (strong, nonatomic) CLCircularRegion *currentHomeRegion;
 
 @property (nonatomic) BOOL isAtHome;

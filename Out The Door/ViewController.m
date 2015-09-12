@@ -10,15 +10,17 @@
 
 @interface ViewController () <MGLMapViewDelegate>
 
-@property (weak, nonatomic) IBOutlet CLRegion *homeGeofence;
-
 @property (nonatomic) MGLMapView *homeMapView;
 
 @property (weak, nonatomic) IBOutlet UIView *mapContainer;
 
-@property (nonatomic) CLLocationCoordinate2D recentLocation;
+@property (nonatomic) CLLocationCoordinate2D homeLocation;
+
+@property (nonatomic) CLCircularRegion *homeLocationRegion;
 
 @property (weak, nonatomic) IBOutlet UILabel *locationLabel;
+
+@property (strong, nonatomic) geoFenceMananger *currentHomeManager;
 
 @end
 
@@ -26,16 +28,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSDictionary *homeLocation = [[NSUserDefaults standardUserDefaults] objectForKey:@"homeLocations"][11];
-    self.recentLocation = CLLocationCoordinate2DMake([[homeLocation valueForKey:@"lat"] floatValue], [[homeLocation valueForKey:@"lon"] floatValue]);
-    self.locationLabel.text = [NSString stringWithFormat:@"You're at %@", [homeLocation valueForKey:@"name"]];
+
+    self.currentHomeManager = [[geoFenceMananger alloc] init];
+
+    self.homeLocation = self.currentHomeManager.currentHomeLocation;
+    self.homeLocationRegion = self.currentHomeManager.currentHomeRegion;
+    self.locationLabel.text = [NSString stringWithFormat:@"You're at %@", self.homeLocationRegion.identifier];
 
     // initialize the map view
     self.homeMapView = [[MGLMapView alloc] initWithFrame:self.mapContainer.bounds];
     self.homeMapView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 
     // set the map's center coordinate
-    [self.homeMapView setCenterCoordinate:self.recentLocation
+    [self.homeMapView setCenterCoordinate:self.homeLocation
                             zoomLevel:17
                              animated:NO];
 
@@ -58,10 +63,9 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)drawShape
-{
+- (void)drawShape {
     // Create a coordinates array to all of the coordinates for our shape.
-    CLLocationCoordinate2D shapeStart = CLLocationCoordinate2DMake(self.recentLocation.latitude, self.recentLocation.longitude  - .0001);
+    CLLocationCoordinate2D shapeStart = CLLocationCoordinate2DMake(self.homeLocation.latitude, self.homeLocation.longitude  - .0001);
 
     CLLocationCoordinate2D coordinates[] = {
         CLLocationCoordinate2DMake(shapeStart.latitude, shapeStart.longitude),
