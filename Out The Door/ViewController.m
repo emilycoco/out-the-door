@@ -26,9 +26,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [[LocationManager sharedInstance] setDelegate:self];
-    [[LocationManager sharedInstance] checkUserPermissionForLocation];
-    NSDictionary *homeLocation = [[NSUserDefaults standardUserDefaults] objectForKey:@"homeLocations"][7];
+    NSDictionary *homeLocation = [[NSUserDefaults standardUserDefaults] objectForKey:@"homeLocations"][11];
     self.recentLocation = CLLocationCoordinate2DMake([[homeLocation valueForKey:@"lat"] floatValue], [[homeLocation valueForKey:@"lon"] floatValue]);
     self.locationLabel.text = [NSString stringWithFormat:@"You're at %@", [homeLocation valueForKey:@"name"]];
 
@@ -40,10 +38,13 @@
     [self.homeMapView setCenterCoordinate:self.recentLocation
                             zoomLevel:17
                              animated:NO];
-    
+
+    [self.homeMapView setShowsUserLocation:YES];
+    NSURL *styleUrl = [[NSURL alloc] initWithString:@"asset://styles/light-v7.json"];
+    [self.homeMapView setStyleURL:styleUrl];
+
     [self.mapContainer addSubview:self.homeMapView];
     self.homeMapView.delegate = self;
-    [self regionFromLocation:self.recentLocation];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -79,6 +80,9 @@
     [self.homeMapView addAnnotation:shape];
 }
 
+
+#pragma mapView delegate methods
+
 - (CGFloat)mapView:(MGLMapView *)mapView alphaForShapeAnnotation:(MGLShape *)annotation
 {
     // Set the alpha for shape annotations to 0.5 (half opacity)
@@ -95,18 +99,6 @@
 {
     // Mapbox cyan fill color
     return [UIColor blueColor];
-}
-
-- (void)locationControllerDidUpdateLocation:(CLLocation  *)location {
-
-}
-
--(CLRegion *)regionFromLocation:(CLLocationCoordinate2D)location {
-    CLRegion *home = [[CLCircularRegion alloc]initWithCenter:location
-                                                        radius:100.0
-                                                    identifier:@"home"];
-    [[LocationManager sharedInstance] startMonitoringForRegion:home];
-    return  home;
 }
 
 @end

@@ -24,9 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [[LocationManager sharedInstance]setDelegate:self];
-    [[LocationManager sharedInstance].locationManager startUpdatingLocation];
-    NSDictionary *homeLocation = [[NSUserDefaults standardUserDefaults] objectForKey:@"homeLocations"][4];
+    NSDictionary *homeLocation = [[NSUserDefaults standardUserDefaults] objectForKey:@"homeLocations"][10];
     self.recentLocation = CLLocationCoordinate2DMake([[homeLocation valueForKey:@"lat"] floatValue], [[homeLocation valueForKey:@"lon"] floatValue]);
 
     // initialize the map view

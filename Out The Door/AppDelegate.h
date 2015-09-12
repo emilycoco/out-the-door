@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "locationManager.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

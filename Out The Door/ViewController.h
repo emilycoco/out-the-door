@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <MapKit/MapKit.h>
 #import "locationManager.h"
+#import "geoFenceMananger.h"
 #import "Mapbox.h"
 
 @interface ViewController : UIViewController

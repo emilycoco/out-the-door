@@ -9,7 +9,7 @@
 #import "locationManager.h"
 
 
-@implementation LocationManager
+@implementation LocationManager 
 
 +(LocationManager *) sharedInstance {
     static LocationManager *sharedInstance = nil;
@@ -59,6 +59,10 @@
 
 -(void)startMonitoringForRegion:(CLRegion *)region {
     [self.locationManager startMonitoringForRegion:region];
+}
+
+-(void)stopMonitoringForRegion:(CLRegion *)region {
+    [self.locationManager stopMonitoringForRegion:region];
 }
 
 -(void)checkUserPermissionForLocation {

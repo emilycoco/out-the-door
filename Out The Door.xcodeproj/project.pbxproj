@@ -11,6 +11,8 @@
 		3800519F1B9E3B9A00C06E47 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3800519E1B9E3B9A00C06E47 /* Settings.bundle */; };
 		380051A21B9E3CE100C06E47 /* addLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 380051A11B9E3CE100C06E47 /* addLocationViewController.m */; };
 		380051A51B9FDAA600C06E47 /* settingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 380051A41B9FDAA600C06E47 /* settingsViewController.m */; };
+		380051A81BA281DE00C06E47 /* geoFenceMananger.m in Sources */ = {isa = PBXBuildFile; fileRef = 380051A71BA281DE00C06E47 /* geoFenceMananger.m */; };
+		380051AC1BA3C55100C06E47 /* locationConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 380051AB1BA3C55100C06E47 /* locationConverter.m */; };
 		381156D51B9B790D00DD2447 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 381156D41B9B790D00DD2447 /* CoreLocation.framework */; };
 		382D6A1C1B924E4800055A81 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 382D6A1B1B924E4800055A81 /* main.m */; };
 		382D6A1F1B924E4800055A81 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 382D6A1E1B924E4800055A81 /* AppDelegate.m */; };
@@ -40,6 +42,10 @@
 		380051A11B9E3CE100C06E47 /* addLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = addLocationViewController.m; sourceTree = "<group>"; };
 		380051A31B9FDAA600C06E47 /* settingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = settingsViewController.h; sourceTree = "<group>"; };
 		380051A41B9FDAA600C06E47 /* settingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = settingsViewController.m; sourceTree = "<group>"; };
+		380051A61BA281DE00C06E47 /* geoFenceMananger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = geoFenceMananger.h; sourceTree = "<group>"; };
+		380051A71BA281DE00C06E47 /* geoFenceMananger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = geoFenceMananger.m; sourceTree = "<group>"; };
+		380051AA1BA3C55100C06E47 /* locationConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = locationConverter.h; sourceTree = "<group>"; };
+		380051AB1BA3C55100C06E47 /* locationConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = locationConverter.m; sourceTree = "<group>"; };
 		381156D41B9B790D00DD2447 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		382D6A161B924E4800055A81 /* Out The Door.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Out The Door.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		382D6A1A1B924E4800055A81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -122,6 +128,10 @@
 				382D6A191B924E4800055A81 /* Supporting Files */,
 				380051A31B9FDAA600C06E47 /* settingsViewController.h */,
 				380051A41B9FDAA600C06E47 /* settingsViewController.m */,
+				380051A61BA281DE00C06E47 /* geoFenceMananger.h */,
+				380051A71BA281DE00C06E47 /* geoFenceMananger.m */,
+				380051AA1BA3C55100C06E47 /* locationConverter.h */,
+				380051AB1BA3C55100C06E47 /* locationConverter.m */,
 			);
 			path = "Out The Door";
 			sourceTree = "<group>";
@@ -325,8 +335,10 @@
 				38AACCAB1B9E3557004B49C3 /* locationManager.m in Sources */,
 				382D6A221B924E4800055A81 /* ViewController.m in Sources */,
 				382D6A1F1B924E4800055A81 /* AppDelegate.m in Sources */,
+				380051A81BA281DE00C06E47 /* geoFenceMananger.m in Sources */,
 				382D6A1C1B924E4800055A81 /* main.m in Sources */,
 				380051A51B9FDAA600C06E47 /* settingsViewController.m in Sources */,
+				380051AC1BA3C55100C06E47 /* locationConverter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

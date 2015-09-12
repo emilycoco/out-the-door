@@ -13,7 +13,6 @@
 @protocol LocationManagerDelegate
 
 - (void)locationControllerDidUpdateLocation:(CLLocation *)location;
-- (void)startUpdatingLocation;
 
 @end
 
@@ -26,8 +25,12 @@
 
 @property (weak, nonatomic) id delegate;
 
-- (void)checkUserPermissionForLocation;
+-(void)checkUserPermissionForLocation;
+
+- (void)startUpdatingLocation;
 
 -(void)startMonitoringForRegion:(CLRegion*)region;
+
+-(void)stopMonitoringForRegion:(CLRegion*)region;
 
 @end
