@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 
-@interface ViewController () <MGLMapViewDelegate>
+@interface ViewController ()
 
 @property (nonatomic) MGLMapView *homeMapView;
 
@@ -41,10 +41,9 @@
 
     // set the map's center coordinate
     [self.homeMapView setCenterCoordinate:self.homeLocation
-                            zoomLevel:17
-                             animated:NO];
+                            zoomLevel:18
+                             animated:YES];
 
-    [self.homeMapView setShowsUserLocation:YES];
     NSURL *styleUrl = [[NSURL alloc] initWithString:@"asset://styles/light-v7.json"];
     [self.homeMapView setStyleURL:styleUrl];
 
@@ -52,10 +51,15 @@
     self.homeMapView.delegate = self;
 }
 
+
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
 
-    [self performSelector:@selector(drawShape) withObject:nil afterDelay:0.1];
+    MGLPointAnnotation *home = [[MGLPointAnnotation alloc] init];
+    home.coordinate = self.homeLocation;
+
+    [self.homeMapView addAnnotation:home];
+//    [self performSelector:@selector(drawShape) withObject:nil afterDelay:0.1];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -87,20 +91,29 @@
 
 #pragma mapView delegate methods
 
-- (CGFloat)mapView:(MGLMapView *)mapView alphaForShapeAnnotation:(MGLShape *)annotation
-{
+- (MGLAnnotationImage *)mapView:(MGLMapView *)mapView imageForAnnotation:(id <MGLAnnotation>)annotation {
+    MGLAnnotationImage *annotationImage = [mapView dequeueReusableAnnotationImageWithIdentifier:@"home"];
+
+    if (!annotationImage)
+    {
+        UIImage *image = [UIImage imageNamed:@"home"];
+        annotationImage = [MGLAnnotationImage annotationImageWithImage:image reuseIdentifier:@"home"];
+    }
+
+    return annotationImage;
+}
+
+- (CGFloat)mapView:(MGLMapView *)mapView alphaForShapeAnnotation:(MGLShape *)annotation {
     // Set the alpha for shape annotations to 0.5 (half opacity)
     return 0.3f;
 }
 
-- (UIColor *)mapView:(MGLMapView *)mapView strokeColorForShapeAnnotation:(MGLShape *)annotation
-{
+- (UIColor *)mapView:(MGLMapView *)mapView strokeColorForShapeAnnotation:(MGLShape *)annotation {
     // Set the stroke color for shape annotations
     return [UIColor whiteColor];
 }
 
-- (UIColor *)mapView:(MGLMapView *)mapView fillColorForPolygonAnnotation:(MGLPolygon *)annotation
-{
+- (UIColor *)mapView:(MGLMapView *)mapView fillColorForPolygonAnnotation:(MGLPolygon *)annotation {
     // Mapbox cyan fill color
     return [UIColor blueColor];
 }

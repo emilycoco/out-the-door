@@ -8,15 +8,17 @@
 
 #import "addLocationViewController.h"
 
-@interface addLocationViewController () <MGLMapViewDelegate>
+@interface addLocationViewController () 
 
 @property (nonatomic) MGLMapView *homeMapView;
 
 @property (weak, nonatomic) IBOutlet UIView *mapContainer;
 
-@property (nonatomic) CLLocationCoordinate2D recentLocation;
+@property (nonatomic) CLLocationCoordinate2D homeLocation;
 
 @property (weak, nonatomic) IBOutlet UITextField *locationName;
+
+@property (strong, nonatomic) geoFenceMananger *currentHomeManager;
 
 @end
 
@@ -24,17 +26,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSDictionary *homeLocation = [[NSUserDefaults standardUserDefaults] objectForKey:@"homeLocations"][10];
-    self.recentLocation = CLLocationCoordinate2DMake([[homeLocation valueForKey:@"lat"] floatValue], [[homeLocation valueForKey:@"lon"] floatValue]);
+
+    self.currentHomeManager = [[geoFenceMananger alloc] init];
+
+    self.homeLocation = self.currentHomeManager.currentHomeLocation;
 
     // initialize the map view
     self.homeMapView = [[MGLMapView alloc] initWithFrame:self.mapContainer.bounds];
     self.homeMapView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 
     // set the map's center coordinate
-    [self.homeMapView setCenterCoordinate:self.recentLocation
-                                zoomLevel:12
+    [self.homeMapView setCenterCoordinate:self.homeLocation
+                                zoomLevel:17
                                  animated:NO];
+
+    [self.homeMapView setShowsUserLocation:YES];
+    NSURL *styleUrl = [[NSURL alloc] initWithString:@"asset://styles/light-v7.json"];
+    [self.homeMapView setStyleURL:styleUrl];
 
     [self.mapContainer addSubview:self.homeMapView];
 }
@@ -59,10 +67,6 @@
 
     [homeLocations addObject:currentLocation];
     [[NSUserDefaults standardUserDefaults] setValue:homeLocations forKey:@"homeLocations"];
-}
-
-- (void)locationControllerDidUpdateLocation:(CLLocation *)location {
-
 }
 
 - (IBAction)close:(id)sender {

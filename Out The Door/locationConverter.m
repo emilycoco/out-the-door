@@ -23,4 +23,10 @@
     return region;
 }
 
+-(CLLocationCoordinate2D)TwoDFromLocation:(CLLocation *)location {
+    CLLocationCoordinate2D point = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude);
+
+    return point;
+}
+
 @end

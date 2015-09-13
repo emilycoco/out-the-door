@@ -10,9 +10,11 @@
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
 #import "Mapbox.h"
+#import "geoFenceMananger.h"
+#import "locationConverter.h"
 
 #import "locationManager.h"
 
-@interface addLocationViewController : UIViewController
+@interface addLocationViewController : UIViewController <MGLMapViewDelegate>
 
 @end

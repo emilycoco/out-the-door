@@ -15,4 +15,6 @@
 
 -(CLCircularRegion *)regionFromDict:(NSDictionary *)dict radius:(double)radius;
 
+-(CLLocationCoordinate2D)TwoDFromLocation:(CLLocation *)location;
+
 @end
