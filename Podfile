@@ -1,3 +1,3 @@
 platform :ios, '8.0'
-pod 'Mapbox-iOS-SDK'
+pod 'GoogleMaps'
 use_frameworks!

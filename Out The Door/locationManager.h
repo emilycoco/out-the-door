@@ -21,13 +21,11 @@
 +(LocationManager *) sharedInstance;
 
 @property (strong, nonatomic) CLLocationManager *locationManager;
-@property (strong, nonatomic) CLLocation *currentLocation;
+@property (nonatomic) CLLocationCoordinate2D currentLocation;
 
 @property (weak, nonatomic) id delegate;
 
 -(void)checkUserPermissionForLocation;
-
-- (void)startUpdatingLocation;
 
 -(void)startMonitoringForRegion:(CLRegion*)region;
 

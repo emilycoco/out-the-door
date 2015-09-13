@@ -19,7 +19,7 @@
     if (self) {
         [[LocationManager sharedInstance] setDelegate:self];
         locationConverter *converter = [[locationConverter alloc] init];
-        NSDictionary *currentHomeKey = [[NSUserDefaults standardUserDefaults] objectForKey:@"homeLocations"][11];
+        NSDictionary *currentHomeKey = [[NSUserDefaults standardUserDefaults] objectForKey:@"homeLocations"][2];
         self.currentHomeRegion = [converter regionFromDict:currentHomeKey radius:100];
         self.currentHomeLocation = [converter locationFromDict:currentHomeKey];
     }
@@ -39,10 +39,8 @@
     [self  checkIsAtHome:[[LocationManager sharedInstance] currentLocation] region:self.currentHomeRegion];
 }
 
--(void)checkIsAtHome:(CLLocation *)location region:(CLCircularRegion *)region {
-    CLLocationCoordinate2D coordLocation = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude);
-
-    if([region containsCoordinate:coordLocation]) {
+-(void)checkIsAtHome:(CLLocationCoordinate2D)location region:(CLCircularRegion *)region {
+    if([region containsCoordinate:location]) {
         self.isAtHome = YES;
     } else {
         self.isAtHome = NO;
@@ -51,7 +49,6 @@
 
 - (void)locationControllerDidUpdateLocation:(CLLocation  *)location {
         [self checkIsAtHome:[[LocationManager sharedInstance] currentLocation] region:self.currentHomeRegion];
-        NSLog(@"LOCATION%f%fHOME%@", location.coordinate.latitude, location.coordinate.longitude, self.currentHomeRegion);
         NSLog(@"ATHOME%d", [self isAtHome]);
 }
 

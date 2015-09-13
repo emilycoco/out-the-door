@@ -8,13 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
-#import <MapKit/MapKit.h>
-#import "Mapbox.h"
 #import "geoFenceMananger.h"
 #import "locationConverter.h"
-
 #import "locationManager.h"
 
-@interface addLocationViewController : UIViewController <MGLMapViewDelegate>
+@interface addLocationViewController : UIViewController
 
 @end

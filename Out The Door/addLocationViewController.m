@@ -7,14 +7,13 @@
 //
 
 #import "addLocationViewController.h"
+@import GoogleMaps;
 
-@interface addLocationViewController () 
+@interface addLocationViewController ()
 
-@property (nonatomic) MGLMapView *homeMapView;
+@property (weak, nonatomic) IBOutlet GMSMapView *addLocationMapView;
 
-@property (weak, nonatomic) IBOutlet UIView *mapContainer;
-
-@property (nonatomic) CLLocationCoordinate2D homeLocation;
+@property (nonatomic) CLLocationCoordinate2D showLocation;
 
 @property (weak, nonatomic) IBOutlet UITextField *locationName;
 
@@ -26,25 +25,35 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [[LocationManager sharedInstance] setDelegate:self];
 
     self.currentHomeManager = [[geoFenceMananger alloc] init];
 
-    self.homeLocation = self.currentHomeManager.currentHomeLocation;
+    if([LocationManager sharedInstance].currentLocation.latitude != 0
+       && [LocationManager sharedInstance].currentLocation.longitude != 0) {
+        self.showLocation = [LocationManager sharedInstance].currentLocation;
+    } else {
+        self.showLocation = self.currentHomeManager.currentHomeLocation;
+    }
 
-    // initialize the map view
-    self.homeMapView = [[MGLMapView alloc] initWithFrame:self.mapContainer.bounds];
-    self.homeMapView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:self.showLocation.latitude
+                                                            longitude:self.showLocation.longitude
+                                                                 zoom:18];
+    self.addLocationMapView.camera = camera;
+    self.addLocationMapView.frame = CGRectZero;
+    self.addLocationMapView.myLocationEnabled = YES;
 
-    // set the map's center coordinate
-    [self.homeMapView setCenterCoordinate:self.homeLocation
-                                zoomLevel:17
-                                 animated:NO];
+    GMSMarker *newLocation = [GMSMarker markerWithPosition:self.showLocation];
+    newLocation.title = @"newLocation";
+    newLocation.map = self.addLocationMapView;
 
-    [self.homeMapView setShowsUserLocation:YES];
-    NSURL *styleUrl = [[NSURL alloc] initWithString:@"asset://styles/light-v7.json"];
-    [self.homeMapView setStyleURL:styleUrl];
-
-    [self.mapContainer addSubview:self.homeMapView];
+    //Home area geofence marker
+    GMSCircle *newLocationRadius = [GMSCircle circleWithPosition:self.showLocation
+                                                   radius:18];
+    newLocationRadius.fillColor = [UIColor colorWithRed:.25 green:0 blue:.25 alpha:0.1];
+    newLocationRadius.strokeColor = [UIColor colorWithRed:.25 green:0 blue:.25 alpha:.5];
+    newLocationRadius.strokeWidth = 5;
+    newLocationRadius.map = self.addLocationMapView;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -52,8 +61,8 @@
 }
 
 - (IBAction)addNewLocation:(id)sender {
-    NSNumber *lat = [NSNumber numberWithDouble:[[LocationManager sharedInstance] currentLocation].coordinate.latitude];
-    NSNumber *lon = [NSNumber numberWithDouble:[[LocationManager sharedInstance] currentLocation].coordinate.longitude];
+    NSNumber *lat = [NSNumber numberWithDouble:[[LocationManager sharedInstance] currentLocation].latitude];
+    NSNumber *lon = [NSNumber numberWithDouble:[[LocationManager sharedInstance] currentLocation].longitude];
     NSString *name = self.locationName.text;
     NSDictionary *currentLocation= [NSMutableDictionary dictionaryWithObjectsAndKeys:
                                      name, @"name",

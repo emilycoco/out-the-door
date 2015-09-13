@@ -4,16 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Mapbox-iOS-SDK-Mapbox.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Mapbox-iOS-SDK.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,17 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>333CB5A4AFC285E7C0E64541CD7D62FE</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D5F5B16042E28DCF077C7D8B920BC9E3</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>ED6676DFE2AB35DD2FCFAD5DDB447C0A</key>
+		<key>1BA84416B19DF31967CCD7D02D962E49</key>
 		<dict>
 			<key>primary</key>
 			<true/>

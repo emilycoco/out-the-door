@@ -9,9 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "locationManager.h"
 #import "geoFenceMananger.h"
-#import "Mapbox.h"
 
-@interface ViewController : UIViewController <MGLMapViewDelegate>
+@interface ViewController : UIViewController
 
 @end
 

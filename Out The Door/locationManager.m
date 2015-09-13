@@ -48,7 +48,7 @@
     NSLog(@"Latitude %+.6f, Longitude %+.6f\n",
           location.coordinate.latitude,
           location.coordinate.longitude);
-    self.currentLocation = location;
+    self.currentLocation = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude);
 
     [self.delegate locationControllerDidUpdateLocation:location];
 }
