@@ -14,6 +14,8 @@
 
 @property (nonatomic) NSArray *availableLocations;
 
+@property (weak, nonatomic) NSDictionary *selectedLocation;
+
 @end
 
 @implementation settingsViewController
@@ -22,14 +24,11 @@
     _locationPicker.dataSource = self;
     _locationPicker.delegate = self;
     self.availableLocations = [[[NSUserDefaults standardUserDefaults] objectForKey:@"homeLocations"] mutableCopy];
+    self.selectedLocation = self.availableLocations[0];
 }
 
 - (IBAction)close:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-- (IBAction)setLocation:(NSDictionary *)location {
-    [[NSUserDefaults standardUserDefaults] setObject:location forKey:@"preferredLocation"];
 }
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
@@ -46,7 +45,11 @@
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
-    [self setLocation:[self.availableLocations objectAtIndex:row]];
+    self.selectedLocation = [self.availableLocations objectAtIndex:row];
+}
+
+- (IBAction)setLocation:(id)sender {
+    [[NSUserDefaults standardUserDefaults] setObject:self.selectedLocation forKey:@"preferredLocation"];
 }
 
 @end

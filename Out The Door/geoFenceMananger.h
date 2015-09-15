@@ -18,6 +18,6 @@
 
 -(BOOL)checkIsAtHome:(CLLocationCoordinate2D)location;
 
--(void)updateCurrentHome:(CLCircularRegion *)home;
+-(void)updateCurrentHome:(CLLocationCoordinate2D)home;
 
 @end

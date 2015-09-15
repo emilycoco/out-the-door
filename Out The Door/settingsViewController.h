@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "geoFenceMananger.h"
+#import "locationConverter.h"
 
 @interface settingsViewController : UIViewController
 

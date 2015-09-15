@@ -151,7 +151,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="setLocation:" destination="3Nn-BR-Ups" eventType="touchUpInside" id="1YN-PM-I9X"/>
+                                    <action selector="setLocation:" destination="3Nn-BR-Ups" eventType="touchUpInside" id="dNb-2a-yDH"/>
                                 </connections>
                             </button>
                         </subviews>

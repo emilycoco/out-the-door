@@ -14,7 +14,8 @@
     self = [super init];
     if (self) {
         locationConverter *converter = [[locationConverter alloc] init];
-        NSDictionary *currentHomeKey = [[NSUserDefaults standardUserDefaults] objectForKey:@"homeLocations"][0];
+        NSDictionary *currentHomeKey = [[NSUserDefaults standardUserDefaults] objectForKey:@"preferredLocation"];
+    
         self.currentHomeRegion = [converter regionFromDict:currentHomeKey radius:100];
         self.currentHomeLocation = [converter locationFromDict:currentHomeKey];
     }
@@ -22,16 +23,9 @@
     return self;
 }
 
--(void)updateCurrentHome:(CLCircularRegion *)home {
-    if (self.currentHomeRegion) {
-        [[LocationManager sharedInstance] stopMonitoringForRegion:self.currentHomeRegion];
-    }
-
-    self.currentHomeLocation = CLLocationCoordinate2DMake(home.center.latitude, home.center.longitude);
-    self.currentHomeRegion = home;
-
-    [[LocationManager sharedInstance] startMonitoringForRegion:self.currentHomeRegion];
-    [self  checkIsAtHome:[[LocationManager sharedInstance] currentLocation]];
+-(void)updateCurrentHome:(CLLocationCoordinate2D)home {
+    self.currentHomeLocation = home;
+    self.currentHomeRegion = [[CLCircularRegion alloc] initWithCenter:home radius:18 identifier:@"homeRegion"];
 }
 
 -(BOOL)checkIsAtHome:(CLLocationCoordinate2D)location {
