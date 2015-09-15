@@ -10,13 +10,13 @@
 #import "locationManager.h"
 #import "locationConverter.h"
 
-@interface geoFenceMananger : NSObject <LocationManagerDelegate>
+@interface geoFenceMananger : NSObject
 
 @property (nonatomic) CLLocationCoordinate2D currentHomeLocation;
 
 @property (strong, nonatomic) CLCircularRegion *currentHomeRegion;
 
-@property (nonatomic) BOOL isAtHome;
+-(BOOL)checkIsAtHome:(CLLocationCoordinate2D)location;
 
 -(void)updateCurrentHome:(CLCircularRegion *)home;
 

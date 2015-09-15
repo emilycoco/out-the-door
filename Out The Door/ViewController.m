@@ -29,17 +29,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [[LocationManager sharedInstance] setDelegate:self];
 
     self.currentHomeManager = [[geoFenceMananger alloc] init];
 
     self.homeLocation = self.currentHomeManager.currentHomeLocation;
     self.homeLocationRegion = self.currentHomeManager.currentHomeRegion;
     self.locationLabel.text = self.homeLocationRegion.identifier;
-    if (self.currentHomeManager.isAtHome == 1) {
-        self.statusLabel.text = @"Get ready to get out the door!";
-    } else {
-        self.statusLabel.text = @"You're already out the door today!";
-    }
 
     GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:self.homeLocation.latitude
                                                             longitude:self.homeLocation.longitude
@@ -70,6 +66,14 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)locationControllerDidUpdateLocation:(CLLocationCoordinate2D)location {
+        if ([self.currentHomeManager checkIsAtHome:location]) {
+            self.statusLabel.text = @"Get ready to get out the door!";
+        } else {
+            self.statusLabel.text = @"You're already out the door today!";
+        }
 }
 
 @end

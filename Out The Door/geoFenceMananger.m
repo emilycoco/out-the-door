@@ -10,16 +10,11 @@
 
 @implementation geoFenceMananger
 
-//set current geofence for the day
-//monitor location, send update when enter/leave geofence
-//save location status
-
 -(id)init {
     self = [super init];
     if (self) {
-        [[LocationManager sharedInstance] setDelegate:self];
         locationConverter *converter = [[locationConverter alloc] init];
-        NSDictionary *currentHomeKey = [[NSUserDefaults standardUserDefaults] objectForKey:@"homeLocations"][2];
+        NSDictionary *currentHomeKey = [[NSUserDefaults standardUserDefaults] objectForKey:@"homeLocations"][0];
         self.currentHomeRegion = [converter regionFromDict:currentHomeKey radius:100];
         self.currentHomeLocation = [converter locationFromDict:currentHomeKey];
     }
@@ -36,21 +31,15 @@
     self.currentHomeRegion = home;
 
     [[LocationManager sharedInstance] startMonitoringForRegion:self.currentHomeRegion];
-    [self  checkIsAtHome:[[LocationManager sharedInstance] currentLocation] region:self.currentHomeRegion];
+    [self  checkIsAtHome:[[LocationManager sharedInstance] currentLocation]];
 }
 
--(void)checkIsAtHome:(CLLocationCoordinate2D)location region:(CLCircularRegion *)region {
-    if([region containsCoordinate:location]) {
-        self.isAtHome = YES;
+-(BOOL)checkIsAtHome:(CLLocationCoordinate2D)location {
+    if([self.currentHomeRegion containsCoordinate:location]) {
+        return YES;
     } else {
-        self.isAtHome = NO;
+        return NO;
     }
 }
-
-- (void)locationControllerDidUpdateLocation:(CLLocation  *)location {
-        [self checkIsAtHome:[[LocationManager sharedInstance] currentLocation] region:self.currentHomeRegion];
-        NSLog(@"ATHOME%d", [self isAtHome]);
-}
-
 
 @end

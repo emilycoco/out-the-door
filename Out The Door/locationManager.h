@@ -12,7 +12,7 @@
 
 @protocol LocationManagerDelegate
 
-- (void)locationControllerDidUpdateLocation:(CLLocation *)location;
+- (void)locationControllerDidUpdateLocation:(CLLocationCoordinate2D)location;
 
 @end
 
