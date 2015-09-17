@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 @import GoogleMaps;
 
-@interface AppDelegate ()
+@interface AppDelegate () <UIAlertViewDelegate>
 
 @end
 
@@ -19,7 +19,21 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [GMSServices provideAPIKey:@"AIzaSyCT1p64AitvvBA337x-lmugwiHOfziNEXY"];
     [[LocationManager sharedInstance] checkUserPermissionForLocation];
+
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(showOutTheDoor:)
+                                                 name:@"atHomeChange"
+                                               object:nil];
     return YES;
+}
+
+-(void)showOutTheDoor:(NSNotification *)notification {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Nice Job!"
+                                                    message:@"You're out the door for the day!"
+                                                   delegate:self
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil,nil];
+    [alert show];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

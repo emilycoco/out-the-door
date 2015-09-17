@@ -10,7 +10,7 @@
 #import "locationManager.h"
 #import "geoFenceMananger.h"
 
-@interface ViewController : UIViewController <LocationManagerDelegate>
+@interface ViewController : UIViewController
 
 @end
 

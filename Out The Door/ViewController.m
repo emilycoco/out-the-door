@@ -29,7 +29,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [[LocationManager sharedInstance] setDelegate:self];
 
     self.currentHomeManager = [[geoFenceMananger alloc] init];
 
@@ -46,7 +45,7 @@
 
     //Home area geofence marker
     GMSCircle *homeRadius = [GMSCircle circleWithPosition:self.homeLocation
-                                             radius:18];
+                                             radius:30];
     homeRadius.fillColor = [UIColor colorWithRed:0 green:.25 blue:0 alpha:0.1];
     homeRadius.strokeColor = [UIColor colorWithRed:0 green:.25 blue:0 alpha:0.5];
     homeRadius.strokeWidth = 5;
