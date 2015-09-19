@@ -9,20 +9,22 @@
 /* Begin PBXBuildFile section */
 		294EE51AB7489F39B35026EB /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B121EBDF52D96FCB40922C1 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		3800519F1B9E3B9A00C06E47 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3800519E1B9E3B9A00C06E47 /* Settings.bundle */; };
-		380051A21B9E3CE100C06E47 /* addLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 380051A11B9E3CE100C06E47 /* addLocationViewController.m */; };
-		380051A51B9FDAA600C06E47 /* settingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 380051A41B9FDAA600C06E47 /* settingsViewController.m */; };
-		380051A81BA281DE00C06E47 /* geoFenceMananger.m in Sources */ = {isa = PBXBuildFile; fileRef = 380051A71BA281DE00C06E47 /* geoFenceMananger.m */; };
+		380051A21B9E3CE100C06E47 /* OtdAddLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 380051A11B9E3CE100C06E47 /* OtdAddLocationViewController.m */; };
+		380051A51B9FDAA600C06E47 /* OtdSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 380051A41B9FDAA600C06E47 /* OtdSettingsViewController.m */; };
+		380051A81BA281DE00C06E47 /* OtdGeoFenceMananger.m in Sources */ = {isa = PBXBuildFile; fileRef = 380051A71BA281DE00C06E47 /* OtdGeoFenceMananger.m */; };
 		380051AC1BA3C55100C06E47 /* locationConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 380051AB1BA3C55100C06E47 /* locationConverter.m */; };
 		381156D51B9B790D00DD2447 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 381156D41B9B790D00DD2447 /* CoreLocation.framework */; };
 		382D6A1C1B924E4800055A81 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 382D6A1B1B924E4800055A81 /* main.m */; };
-		382D6A1F1B924E4800055A81 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 382D6A1E1B924E4800055A81 /* AppDelegate.m */; };
-		382D6A221B924E4800055A81 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 382D6A211B924E4800055A81 /* ViewController.m */; };
+		382D6A1F1B924E4800055A81 /* OtdAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 382D6A1E1B924E4800055A81 /* OtdAppDelegate.m */; };
+		382D6A221B924E4800055A81 /* OtdMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 382D6A211B924E4800055A81 /* OtdMainViewController.m */; };
 		382D6A251B924E4800055A81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 382D6A231B924E4800055A81 /* Main.storyboard */; };
 		382D6A271B924E4800055A81 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 382D6A261B924E4800055A81 /* Images.xcassets */; };
 		382D6A2A1B924E4800055A81 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 382D6A281B924E4800055A81 /* LaunchScreen.xib */; };
 		382D6A361B924E4800055A81 /* Out_The_DoorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 382D6A351B924E4800055A81 /* Out_The_DoorTests.m */; };
-		3844B1001BA953A1008DB4C2 /* addRoutineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3844B0FF1BA953A1008DB4C2 /* addRoutineViewController.m */; };
-		38AACCAB1B9E3557004B49C3 /* locationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 38AACCAA1B9E3557004B49C3 /* locationManager.m */; };
+		3844B1001BA953A1008DB4C2 /* OtdAddRoutineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3844B0FF1BA953A1008DB4C2 /* OtdAddRoutineViewController.m */; };
+		385481511BAE08CD00C35369 /* OtdDataInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 385481501BAE08CD00C35369 /* OtdDataInterface.m */; };
+		385481561BAE101A00C35369 /* OtdLocationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 385481551BAE101A00C35369 /* OtdLocationModel.m */; };
+		38AACCAB1B9E3557004B49C3 /* OtdLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 38AACCAA1B9E3557004B49C3 /* OtdLocationManager.m */; };
 		38AACCAD1B9E3665004B49C3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38AACCAC1B9E3665004B49C3 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,32 +41,36 @@
 /* Begin PBXFileReference section */
 		29AE5824DF79DABE9193FDBB /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		3800519E1B9E3B9A00C06E47 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = ../../Downloads/Settings.bundle; sourceTree = "<group>"; };
-		380051A01B9E3CD600C06E47 /* addLocationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = addLocationViewController.h; sourceTree = "<group>"; };
-		380051A11B9E3CE100C06E47 /* addLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = addLocationViewController.m; sourceTree = "<group>"; };
-		380051A31B9FDAA600C06E47 /* settingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = settingsViewController.h; sourceTree = "<group>"; };
-		380051A41B9FDAA600C06E47 /* settingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = settingsViewController.m; sourceTree = "<group>"; };
-		380051A61BA281DE00C06E47 /* geoFenceMananger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = geoFenceMananger.h; sourceTree = "<group>"; };
-		380051A71BA281DE00C06E47 /* geoFenceMananger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = geoFenceMananger.m; sourceTree = "<group>"; };
+		380051A01B9E3CD600C06E47 /* OtdAddLocationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OtdAddLocationViewController.h; sourceTree = "<group>"; };
+		380051A11B9E3CE100C06E47 /* OtdAddLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtdAddLocationViewController.m; sourceTree = "<group>"; };
+		380051A31B9FDAA600C06E47 /* OtdSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtdSettingsViewController.h; sourceTree = "<group>"; };
+		380051A41B9FDAA600C06E47 /* OtdSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtdSettingsViewController.m; sourceTree = "<group>"; };
+		380051A61BA281DE00C06E47 /* OtdGeoFenceMananger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtdGeoFenceMananger.h; sourceTree = "<group>"; };
+		380051A71BA281DE00C06E47 /* OtdGeoFenceMananger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtdGeoFenceMananger.m; sourceTree = "<group>"; };
 		380051AA1BA3C55100C06E47 /* locationConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = locationConverter.h; sourceTree = "<group>"; };
 		380051AB1BA3C55100C06E47 /* locationConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = locationConverter.m; sourceTree = "<group>"; };
 		381156D41B9B790D00DD2447 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		382D6A161B924E4800055A81 /* Out The Door.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Out The Door.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		382D6A1A1B924E4800055A81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		382D6A1B1B924E4800055A81 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		382D6A1D1B924E4800055A81 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		382D6A1E1B924E4800055A81 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		382D6A201B924E4800055A81 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		382D6A211B924E4800055A81 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		382D6A1D1B924E4800055A81 /* OtdAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OtdAppDelegate.h; sourceTree = "<group>"; };
+		382D6A1E1B924E4800055A81 /* OtdAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OtdAppDelegate.m; sourceTree = "<group>"; };
+		382D6A201B924E4800055A81 /* OtdMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OtdMainViewController.h; sourceTree = "<group>"; };
+		382D6A211B924E4800055A81 /* OtdMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OtdMainViewController.m; sourceTree = "<group>"; };
 		382D6A241B924E4800055A81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		382D6A261B924E4800055A81 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		382D6A291B924E4800055A81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		382D6A2F1B924E4800055A81 /* Out The DoorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Out The DoorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		382D6A341B924E4800055A81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		382D6A351B924E4800055A81 /* Out_The_DoorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Out_The_DoorTests.m; sourceTree = "<group>"; };
-		3844B0FE1BA953A1008DB4C2 /* addRoutineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = addRoutineViewController.h; sourceTree = "<group>"; };
-		3844B0FF1BA953A1008DB4C2 /* addRoutineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = addRoutineViewController.m; sourceTree = "<group>"; };
-		38AACCA91B9E354E004B49C3 /* locationManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = locationManager.h; sourceTree = "<group>"; };
-		38AACCAA1B9E3557004B49C3 /* locationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = locationManager.m; sourceTree = "<group>"; };
+		3844B0FE1BA953A1008DB4C2 /* OtdAddRoutineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtdAddRoutineViewController.h; sourceTree = "<group>"; };
+		3844B0FF1BA953A1008DB4C2 /* OtdAddRoutineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtdAddRoutineViewController.m; sourceTree = "<group>"; };
+		3854814F1BAE08CD00C35369 /* OtdDataInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtdDataInterface.h; sourceTree = "<group>"; };
+		385481501BAE08CD00C35369 /* OtdDataInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtdDataInterface.m; sourceTree = "<group>"; };
+		385481541BAE101A00C35369 /* OtdLocationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtdLocationModel.h; sourceTree = "<group>"; };
+		385481551BAE101A00C35369 /* OtdLocationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtdLocationModel.m; sourceTree = "<group>"; };
+		38AACCA91B9E354E004B49C3 /* OtdLocationManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OtdLocationManager.h; sourceTree = "<group>"; };
+		38AACCAA1B9E3557004B49C3 /* OtdLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtdLocationManager.m; sourceTree = "<group>"; };
 		38AACCAC1B9E3665004B49C3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		6B121EBDF52D96FCB40922C1 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		760DF2104E339472F1D6B462 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -117,26 +123,29 @@
 		382D6A181B924E4800055A81 /* Out The Door */ = {
 			isa = PBXGroup;
 			children = (
-				38AACCA91B9E354E004B49C3 /* locationManager.h */,
-				38AACCAA1B9E3557004B49C3 /* locationManager.m */,
-				382D6A1D1B924E4800055A81 /* AppDelegate.h */,
-				382D6A1E1B924E4800055A81 /* AppDelegate.m */,
-				382D6A201B924E4800055A81 /* ViewController.h */,
-				382D6A211B924E4800055A81 /* ViewController.m */,
-				380051A01B9E3CD600C06E47 /* addLocationViewController.h */,
-				380051A11B9E3CE100C06E47 /* addLocationViewController.m */,
+				385481531BAE0FEE00C35369 /* data classes */,
+				38AACCA91B9E354E004B49C3 /* OtdLocationManager.h */,
+				38AACCAA1B9E3557004B49C3 /* OtdLocationManager.m */,
+				382D6A1D1B924E4800055A81 /* OtdAppDelegate.h */,
+				382D6A1E1B924E4800055A81 /* OtdAppDelegate.m */,
+				382D6A201B924E4800055A81 /* OtdMainViewController.h */,
+				382D6A211B924E4800055A81 /* OtdMainViewController.m */,
+				380051A01B9E3CD600C06E47 /* OtdAddLocationViewController.h */,
+				380051A11B9E3CE100C06E47 /* OtdAddLocationViewController.m */,
 				382D6A231B924E4800055A81 /* Main.storyboard */,
 				382D6A261B924E4800055A81 /* Images.xcassets */,
 				382D6A281B924E4800055A81 /* LaunchScreen.xib */,
 				382D6A191B924E4800055A81 /* Supporting Files */,
-				380051A31B9FDAA600C06E47 /* settingsViewController.h */,
-				380051A41B9FDAA600C06E47 /* settingsViewController.m */,
-				380051A61BA281DE00C06E47 /* geoFenceMananger.h */,
-				380051A71BA281DE00C06E47 /* geoFenceMananger.m */,
+				380051A31B9FDAA600C06E47 /* OtdSettingsViewController.h */,
+				380051A41B9FDAA600C06E47 /* OtdSettingsViewController.m */,
+				380051A61BA281DE00C06E47 /* OtdGeoFenceMananger.h */,
+				380051A71BA281DE00C06E47 /* OtdGeoFenceMananger.m */,
 				380051AA1BA3C55100C06E47 /* locationConverter.h */,
 				380051AB1BA3C55100C06E47 /* locationConverter.m */,
-				3844B0FE1BA953A1008DB4C2 /* addRoutineViewController.h */,
-				3844B0FF1BA953A1008DB4C2 /* addRoutineViewController.m */,
+				3844B0FE1BA953A1008DB4C2 /* OtdAddRoutineViewController.h */,
+				3844B0FF1BA953A1008DB4C2 /* OtdAddRoutineViewController.m */,
+				3854814F1BAE08CD00C35369 /* OtdDataInterface.h */,
+				385481501BAE08CD00C35369 /* OtdDataInterface.m */,
 			);
 			path = "Out The Door";
 			sourceTree = "<group>";
@@ -165,6 +174,15 @@
 				382D6A341B924E4800055A81 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		385481531BAE0FEE00C35369 /* data classes */ = {
+			isa = PBXGroup;
+			children = (
+				385481541BAE101A00C35369 /* OtdLocationModel.h */,
+				385481551BAE101A00C35369 /* OtdLocationModel.m */,
+			);
+			name = "data classes";
 			sourceTree = "<group>";
 		};
 		48122AA221FF875D78D3E094 /* Pods */ = {
@@ -336,14 +354,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				380051A21B9E3CE100C06E47 /* addLocationViewController.m in Sources */,
-				38AACCAB1B9E3557004B49C3 /* locationManager.m in Sources */,
-				3844B1001BA953A1008DB4C2 /* addRoutineViewController.m in Sources */,
-				382D6A221B924E4800055A81 /* ViewController.m in Sources */,
-				382D6A1F1B924E4800055A81 /* AppDelegate.m in Sources */,
-				380051A81BA281DE00C06E47 /* geoFenceMananger.m in Sources */,
+				380051A21B9E3CE100C06E47 /* OtdAddLocationViewController.m in Sources */,
+				385481511BAE08CD00C35369 /* OtdDataInterface.m in Sources */,
+				385481561BAE101A00C35369 /* OtdLocationModel.m in Sources */,
+				38AACCAB1B9E3557004B49C3 /* OtdLocationManager.m in Sources */,
+				3844B1001BA953A1008DB4C2 /* OtdAddRoutineViewController.m in Sources */,
+				382D6A221B924E4800055A81 /* OtdMainViewController.m in Sources */,
+				382D6A1F1B924E4800055A81 /* OtdAppDelegate.m in Sources */,
+				380051A81BA281DE00C06E47 /* OtdGeoFenceMananger.m in Sources */,
 				382D6A1C1B924E4800055A81 /* main.m in Sources */,
-				380051A51B9FDAA600C06E47 /* settingsViewController.m in Sources */,
+				380051A51B9FDAA600C06E47 /* OtdSettingsViewController.m in Sources */,
 				380051AC1BA3C55100C06E47 /* locationConverter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

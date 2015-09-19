@@ -4,6 +4,16 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Bolts.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Parse.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -12,7 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1BA84416B19DF31967CCD7D02D962E49</key>
+		<key>068F9051499FDF71679B5C89AF7E3676</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1A44AF22A828654070C0ACB744F0F4D9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D3534CFCBC901BADBB50A5CCF06DBF07</key>
 		<dict>
 			<key>primary</key>
 			<true/>

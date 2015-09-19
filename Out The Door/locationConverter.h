@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "locationManager.h"
+#import "OtdLocationManager.h"
 
 @interface locationConverter : NSObject
 
