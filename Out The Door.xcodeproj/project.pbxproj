@@ -24,6 +24,8 @@
 		3844B1001BA953A1008DB4C2 /* OtdAddRoutineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3844B0FF1BA953A1008DB4C2 /* OtdAddRoutineViewController.m */; };
 		385481511BAE08CD00C35369 /* OtdDataInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 385481501BAE08CD00C35369 /* OtdDataInterface.m */; };
 		385481561BAE101A00C35369 /* OtdLocationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 385481551BAE101A00C35369 /* OtdLocationModel.m */; };
+		385708BB1BAF4A32001E6713 /* OtdRoutineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 385708BA1BAF4A32001E6713 /* OtdRoutineModel.m */; };
+		385708BE1BAF5381001E6713 /* OtdRoutineTaskModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 385708BD1BAF5381001E6713 /* OtdRoutineTaskModel.m */; };
 		38AACCAB1B9E3557004B49C3 /* OtdLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 38AACCAA1B9E3557004B49C3 /* OtdLocationManager.m */; };
 		38AACCAD1B9E3665004B49C3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38AACCAC1B9E3665004B49C3 /* MapKit.framework */; };
 /* End PBXBuildFile section */
@@ -69,6 +71,10 @@
 		385481501BAE08CD00C35369 /* OtdDataInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtdDataInterface.m; sourceTree = "<group>"; };
 		385481541BAE101A00C35369 /* OtdLocationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtdLocationModel.h; sourceTree = "<group>"; };
 		385481551BAE101A00C35369 /* OtdLocationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtdLocationModel.m; sourceTree = "<group>"; };
+		385708B91BAF4A32001E6713 /* OtdRoutineModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtdRoutineModel.h; sourceTree = "<group>"; };
+		385708BA1BAF4A32001E6713 /* OtdRoutineModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtdRoutineModel.m; sourceTree = "<group>"; };
+		385708BC1BAF5381001E6713 /* OtdRoutineTaskModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtdRoutineTaskModel.h; sourceTree = "<group>"; };
+		385708BD1BAF5381001E6713 /* OtdRoutineTaskModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtdRoutineTaskModel.m; sourceTree = "<group>"; };
 		38AACCA91B9E354E004B49C3 /* OtdLocationManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OtdLocationManager.h; sourceTree = "<group>"; };
 		38AACCAA1B9E3557004B49C3 /* OtdLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtdLocationManager.m; sourceTree = "<group>"; };
 		38AACCAC1B9E3665004B49C3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -181,6 +187,10 @@
 				380051AB1BA3C55100C06E47 /* locationConverter.m */,
 				385481541BAE101A00C35369 /* OtdLocationModel.h */,
 				385481551BAE101A00C35369 /* OtdLocationModel.m */,
+				385708B91BAF4A32001E6713 /* OtdRoutineModel.h */,
+				385708BA1BAF4A32001E6713 /* OtdRoutineModel.m */,
+				385708BC1BAF5381001E6713 /* OtdRoutineTaskModel.h */,
+				385708BD1BAF5381001E6713 /* OtdRoutineTaskModel.m */,
 			);
 			name = "data management";
 			sourceTree = "<group>";
@@ -360,7 +370,9 @@
 				38AACCAB1B9E3557004B49C3 /* OtdLocationManager.m in Sources */,
 				3844B1001BA953A1008DB4C2 /* OtdAddRoutineViewController.m in Sources */,
 				382D6A221B924E4800055A81 /* OtdMainViewController.m in Sources */,
+				385708BB1BAF4A32001E6713 /* OtdRoutineModel.m in Sources */,
 				382D6A1F1B924E4800055A81 /* OtdAppDelegate.m in Sources */,
+				385708BE1BAF5381001E6713 /* OtdRoutineTaskModel.m in Sources */,
 				380051A81BA281DE00C06E47 /* OtdGeoFenceMananger.m in Sources */,
 				382D6A1C1B924E4800055A81 /* main.m in Sources */,
 				380051A51B9FDAA600C06E47 /* OtdSettingsViewController.m in Sources */,

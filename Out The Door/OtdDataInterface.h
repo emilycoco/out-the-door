@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "OtdLocationModel.h"
+#import "OtdRoutineModel.h"
 
 @interface OtdDataInterface : NSObject
 
@@ -23,5 +24,9 @@
 -(void)addLocation:(OtdLocationModel *)locationModel completion:(void(^)(BOOL success, NSError *error))completionBlock;
 
 -(void)getAllLocations:(void(^)(NSArray *locations, NSError *error))completionBlock;
+
+-(void)addRoutine:(OtdRoutineModel *)routineModel completion:(void(^)(BOOL success, NSError *error))completionBlock;
+
+-(void)getAllRoutines:(void(^)(NSArray *routines, NSError *error))completionBlock;
 
 @end
