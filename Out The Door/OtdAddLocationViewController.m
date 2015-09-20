@@ -61,21 +61,18 @@
 }
 
 - (IBAction)addNewLocation:(id)sender {
-    NSNumber *lat = [NSNumber numberWithDouble:[[OtdLocationManager sharedInstance] currentLocation].latitude];
-    NSNumber *lon = [NSNumber numberWithDouble:[[OtdLocationManager sharedInstance] currentLocation].longitude];
-    NSString *name = self.locationName.text;
-    NSDictionary *currentLocation= [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                                     name, @"name",
-                                     lat, @"lat",
-                                     lon, @"lon", nil];
+    OtdLocationModel *newLocationModel = [[OtdLocationModel alloc] init];
+    newLocationModel.name = self.locationName.text;
+    newLocationModel.location = CLLocationCoordinate2DMake([[OtdLocationManager sharedInstance] currentLocation].latitude, [[OtdLocationManager sharedInstance] currentLocation].latitude);
+    newLocationModel.radius = 30;
 
-    NSMutableArray *homeLocations = [[NSMutableArray alloc] init];
-    if ([[NSUserDefaults standardUserDefaults] objectForKey:@"homeLocations"]) {
-        homeLocations = [[[NSUserDefaults standardUserDefaults] objectForKey:@"homeLocations"] mutableCopy];
-    }
+    [[OtdDataInterface sharedInstance] addLocation:newLocationModel completion:^(BOOL success, NSError *error) {
+        if (success) {
 
-    [homeLocations addObject:currentLocation];
-    [[NSUserDefaults standardUserDefaults] setValue:homeLocations forKey:@"homeLocations"];
+        } else {
+
+        }
+    }];
 }
 
 - (IBAction)close:(id)sender {

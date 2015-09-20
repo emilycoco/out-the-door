@@ -55,10 +55,6 @@
     home.title = @"home";
     home.icon = [UIImage imageNamed:@"home"];
     home.map = self.homeMapView;
-
-    PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
-    testObject[@"foo"] = @"bar";
-    [testObject saveInBackground];
 }
 
 

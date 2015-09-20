@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "OtdGeoFenceMananger.h"
 #import "locationConverter.h"
+#import "OtdDataInterface.h"
+#import "OtdLocationModel.h"
 
 @interface OtdSettingsViewController : UIViewController
 

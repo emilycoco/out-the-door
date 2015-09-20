@@ -11,6 +11,7 @@
 #import "OtdGeoFenceMananger.h"
 #import "locationConverter.h"
 #import "OtdLocationManager.h"
+#import "OtdDataInterface.h"
 
 @interface OtdAddLocationViewController : UIViewController
 

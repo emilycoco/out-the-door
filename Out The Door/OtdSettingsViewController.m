@@ -21,10 +21,15 @@
 @implementation OtdSettingsViewController
 
 - (void)viewDidLoad {
-    _locationPicker.dataSource = self;
-    _locationPicker.delegate = self;
-    self.availableLocations = [[[NSUserDefaults standardUserDefaults] objectForKey:@"homeLocations"] mutableCopy];
-    self.selectedLocation = self.availableLocations[0];
+    [[OtdDataInterface sharedInstance] getAllLocations:^(NSArray *locations, NSError *error) {
+        if (locations) {
+            self.availableLocations = locations;
+            self.selectedLocation = self.availableLocations[0];
+            _locationPicker.dataSource = self;
+            _locationPicker.delegate = self;
+        }
+    }];
+
 }
 
 - (IBAction)close:(id)sender {

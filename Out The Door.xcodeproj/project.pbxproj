@@ -123,7 +123,7 @@
 		382D6A181B924E4800055A81 /* Out The Door */ = {
 			isa = PBXGroup;
 			children = (
-				385481531BAE0FEE00C35369 /* data classes */,
+				385481531BAE0FEE00C35369 /* data management */,
 				38AACCA91B9E354E004B49C3 /* OtdLocationManager.h */,
 				38AACCAA1B9E3557004B49C3 /* OtdLocationManager.m */,
 				382D6A1D1B924E4800055A81 /* OtdAppDelegate.h */,
@@ -140,12 +140,8 @@
 				380051A41B9FDAA600C06E47 /* OtdSettingsViewController.m */,
 				380051A61BA281DE00C06E47 /* OtdGeoFenceMananger.h */,
 				380051A71BA281DE00C06E47 /* OtdGeoFenceMananger.m */,
-				380051AA1BA3C55100C06E47 /* locationConverter.h */,
-				380051AB1BA3C55100C06E47 /* locationConverter.m */,
 				3844B0FE1BA953A1008DB4C2 /* OtdAddRoutineViewController.h */,
 				3844B0FF1BA953A1008DB4C2 /* OtdAddRoutineViewController.m */,
-				3854814F1BAE08CD00C35369 /* OtdDataInterface.h */,
-				385481501BAE08CD00C35369 /* OtdDataInterface.m */,
 			);
 			path = "Out The Door";
 			sourceTree = "<group>";
@@ -176,13 +172,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		385481531BAE0FEE00C35369 /* data classes */ = {
+		385481531BAE0FEE00C35369 /* data management */ = {
 			isa = PBXGroup;
 			children = (
+				3854814F1BAE08CD00C35369 /* OtdDataInterface.h */,
+				385481501BAE08CD00C35369 /* OtdDataInterface.m */,
+				380051AA1BA3C55100C06E47 /* locationConverter.h */,
+				380051AB1BA3C55100C06E47 /* locationConverter.m */,
 				385481541BAE101A00C35369 /* OtdLocationModel.h */,
 				385481551BAE101A00C35369 /* OtdLocationModel.m */,
 			);
-			name = "data classes";
+			name = "data management";
 			sourceTree = "<group>";
 		};
 		48122AA221FF875D78D3E094 /* Pods */ = {

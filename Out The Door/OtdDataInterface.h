@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "OtdLocationModel.h"
 
 @interface OtdDataInterface : NSObject
 
@@ -17,7 +18,9 @@
 //get all routines with completion block
 //get all things to do
 
--(void)addLocation:(void(^)(BOOL success, NSError *error))completionBlock;
++(OtdDataInterface *) sharedInstance;
+
+-(void)addLocation:(OtdLocationModel *)locationModel completion:(void(^)(BOOL success, NSError *error))completionBlock;
 
 -(void)getAllLocations:(void(^)(NSArray *locations, NSError *error))completionBlock;
 
