@@ -10,7 +10,7 @@
 		294EE51AB7489F39B35026EB /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B121EBDF52D96FCB40922C1 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		3800519F1B9E3B9A00C06E47 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3800519E1B9E3B9A00C06E47 /* Settings.bundle */; };
 		380051A21B9E3CE100C06E47 /* OtdAddLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 380051A11B9E3CE100C06E47 /* OtdAddLocationViewController.m */; };
-		380051A51B9FDAA600C06E47 /* OtdSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 380051A41B9FDAA600C06E47 /* OtdSettingsViewController.m */; };
+		380051A51B9FDAA600C06E47 /* OtdChooseLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 380051A41B9FDAA600C06E47 /* OtdChooseLocationViewController.m */; };
 		380051A81BA281DE00C06E47 /* OtdGeoFenceMananger.m in Sources */ = {isa = PBXBuildFile; fileRef = 380051A71BA281DE00C06E47 /* OtdGeoFenceMananger.m */; };
 		380051AC1BA3C55100C06E47 /* locationConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 380051AB1BA3C55100C06E47 /* locationConverter.m */; };
 		381156D51B9B790D00DD2447 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 381156D41B9B790D00DD2447 /* CoreLocation.framework */; };
@@ -26,6 +26,8 @@
 		385481561BAE101A00C35369 /* OtdLocationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 385481551BAE101A00C35369 /* OtdLocationModel.m */; };
 		385708BB1BAF4A32001E6713 /* OtdRoutineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 385708BA1BAF4A32001E6713 /* OtdRoutineModel.m */; };
 		385708BE1BAF5381001E6713 /* OtdRoutineTaskModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 385708BD1BAF5381001E6713 /* OtdRoutineTaskModel.m */; };
+		385708C61BAF6EB9001E6713 /* OtdAddTasksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 385708C51BAF6EB9001E6713 /* OtdAddTasksViewController.m */; };
+		385708C91BAFA17F001E6713 /* OtdRoutinePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 385708C81BAFA17F001E6713 /* OtdRoutinePageViewController.m */; };
 		38AACCAB1B9E3557004B49C3 /* OtdLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 38AACCAA1B9E3557004B49C3 /* OtdLocationManager.m */; };
 		38AACCAD1B9E3665004B49C3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38AACCAC1B9E3665004B49C3 /* MapKit.framework */; };
 /* End PBXBuildFile section */
@@ -45,8 +47,8 @@
 		3800519E1B9E3B9A00C06E47 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = ../../Downloads/Settings.bundle; sourceTree = "<group>"; };
 		380051A01B9E3CD600C06E47 /* OtdAddLocationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OtdAddLocationViewController.h; sourceTree = "<group>"; };
 		380051A11B9E3CE100C06E47 /* OtdAddLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtdAddLocationViewController.m; sourceTree = "<group>"; };
-		380051A31B9FDAA600C06E47 /* OtdSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtdSettingsViewController.h; sourceTree = "<group>"; };
-		380051A41B9FDAA600C06E47 /* OtdSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtdSettingsViewController.m; sourceTree = "<group>"; };
+		380051A31B9FDAA600C06E47 /* OtdChooseLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtdChooseLocationViewController.h; sourceTree = "<group>"; };
+		380051A41B9FDAA600C06E47 /* OtdChooseLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtdChooseLocationViewController.m; sourceTree = "<group>"; };
 		380051A61BA281DE00C06E47 /* OtdGeoFenceMananger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtdGeoFenceMananger.h; sourceTree = "<group>"; };
 		380051A71BA281DE00C06E47 /* OtdGeoFenceMananger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtdGeoFenceMananger.m; sourceTree = "<group>"; };
 		380051AA1BA3C55100C06E47 /* locationConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = locationConverter.h; sourceTree = "<group>"; };
@@ -75,6 +77,10 @@
 		385708BA1BAF4A32001E6713 /* OtdRoutineModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtdRoutineModel.m; sourceTree = "<group>"; };
 		385708BC1BAF5381001E6713 /* OtdRoutineTaskModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtdRoutineTaskModel.h; sourceTree = "<group>"; };
 		385708BD1BAF5381001E6713 /* OtdRoutineTaskModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtdRoutineTaskModel.m; sourceTree = "<group>"; };
+		385708C41BAF6EB9001E6713 /* OtdAddTasksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtdAddTasksViewController.h; sourceTree = "<group>"; };
+		385708C51BAF6EB9001E6713 /* OtdAddTasksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtdAddTasksViewController.m; sourceTree = "<group>"; };
+		385708C71BAFA17F001E6713 /* OtdRoutinePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtdRoutinePageViewController.h; sourceTree = "<group>"; };
+		385708C81BAFA17F001E6713 /* OtdRoutinePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtdRoutinePageViewController.m; sourceTree = "<group>"; };
 		38AACCA91B9E354E004B49C3 /* OtdLocationManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OtdLocationManager.h; sourceTree = "<group>"; };
 		38AACCAA1B9E3557004B49C3 /* OtdLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtdLocationManager.m; sourceTree = "<group>"; };
 		38AACCAC1B9E3665004B49C3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -130,24 +136,18 @@
 			isa = PBXGroup;
 			children = (
 				385481531BAE0FEE00C35369 /* data management */,
-				38AACCA91B9E354E004B49C3 /* OtdLocationManager.h */,
-				38AACCAA1B9E3557004B49C3 /* OtdLocationManager.m */,
+				385708C01BAF6BA4001E6713 /* shared utilities */,
+				385708BF1BAF6B63001E6713 /* routine views */,
+				380051A01B9E3CD600C06E47 /* OtdAddLocationViewController.h */,
+				380051A11B9E3CE100C06E47 /* OtdAddLocationViewController.m */,
 				382D6A1D1B924E4800055A81 /* OtdAppDelegate.h */,
 				382D6A1E1B924E4800055A81 /* OtdAppDelegate.m */,
 				382D6A201B924E4800055A81 /* OtdMainViewController.h */,
 				382D6A211B924E4800055A81 /* OtdMainViewController.m */,
-				380051A01B9E3CD600C06E47 /* OtdAddLocationViewController.h */,
-				380051A11B9E3CE100C06E47 /* OtdAddLocationViewController.m */,
 				382D6A231B924E4800055A81 /* Main.storyboard */,
 				382D6A261B924E4800055A81 /* Images.xcassets */,
 				382D6A281B924E4800055A81 /* LaunchScreen.xib */,
 				382D6A191B924E4800055A81 /* Supporting Files */,
-				380051A31B9FDAA600C06E47 /* OtdSettingsViewController.h */,
-				380051A41B9FDAA600C06E47 /* OtdSettingsViewController.m */,
-				380051A61BA281DE00C06E47 /* OtdGeoFenceMananger.h */,
-				380051A71BA281DE00C06E47 /* OtdGeoFenceMananger.m */,
-				3844B0FE1BA953A1008DB4C2 /* OtdAddRoutineViewController.h */,
-				3844B0FF1BA953A1008DB4C2 /* OtdAddRoutineViewController.m */,
 			);
 			path = "Out The Door";
 			sourceTree = "<group>";
@@ -193,6 +193,32 @@
 				385708BD1BAF5381001E6713 /* OtdRoutineTaskModel.m */,
 			);
 			name = "data management";
+			sourceTree = "<group>";
+		};
+		385708BF1BAF6B63001E6713 /* routine views */ = {
+			isa = PBXGroup;
+			children = (
+				380051A31B9FDAA600C06E47 /* OtdChooseLocationViewController.h */,
+				380051A41B9FDAA600C06E47 /* OtdChooseLocationViewController.m */,
+				3844B0FE1BA953A1008DB4C2 /* OtdAddRoutineViewController.h */,
+				3844B0FF1BA953A1008DB4C2 /* OtdAddRoutineViewController.m */,
+				385708C41BAF6EB9001E6713 /* OtdAddTasksViewController.h */,
+				385708C51BAF6EB9001E6713 /* OtdAddTasksViewController.m */,
+				385708C71BAFA17F001E6713 /* OtdRoutinePageViewController.h */,
+				385708C81BAFA17F001E6713 /* OtdRoutinePageViewController.m */,
+			);
+			name = "routine views";
+			sourceTree = "<group>";
+		};
+		385708C01BAF6BA4001E6713 /* shared utilities */ = {
+			isa = PBXGroup;
+			children = (
+				38AACCA91B9E354E004B49C3 /* OtdLocationManager.h */,
+				38AACCAA1B9E3557004B49C3 /* OtdLocationManager.m */,
+				380051A61BA281DE00C06E47 /* OtdGeoFenceMananger.h */,
+				380051A71BA281DE00C06E47 /* OtdGeoFenceMananger.m */,
+			);
+			name = "shared utilities";
 			sourceTree = "<group>";
 		};
 		48122AA221FF875D78D3E094 /* Pods */ = {
@@ -365,6 +391,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				380051A21B9E3CE100C06E47 /* OtdAddLocationViewController.m in Sources */,
+				385708C61BAF6EB9001E6713 /* OtdAddTasksViewController.m in Sources */,
 				385481511BAE08CD00C35369 /* OtdDataInterface.m in Sources */,
 				385481561BAE101A00C35369 /* OtdLocationModel.m in Sources */,
 				38AACCAB1B9E3557004B49C3 /* OtdLocationManager.m in Sources */,
@@ -375,7 +402,8 @@
 				385708BE1BAF5381001E6713 /* OtdRoutineTaskModel.m in Sources */,
 				380051A81BA281DE00C06E47 /* OtdGeoFenceMananger.m in Sources */,
 				382D6A1C1B924E4800055A81 /* main.m in Sources */,
-				380051A51B9FDAA600C06E47 /* OtdSettingsViewController.m in Sources */,
+				380051A51B9FDAA600C06E47 /* OtdChooseLocationViewController.m in Sources */,
+				385708C91BAFA17F001E6713 /* OtdRoutinePageViewController.m in Sources */,
 				380051AC1BA3C55100C06E47 /* locationConverter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

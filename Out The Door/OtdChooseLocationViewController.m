@@ -1,14 +1,14 @@
 //
-//  settingsViewController.m
+//  OtdChooseLocationViewController.h.m
 //  Out The Door
 //
 //  Created by Emily Coco on 9/8/15.
 //  Copyright (c) 2015 Emily Coco. All rights reserved.
 //
 
-#import "OtdSettingsViewController.h"
+#import "OtdChooseLocationViewController.h"
 
-@interface OtdSettingsViewController() <UIPickerViewDataSource,UIPickerViewDelegate>
+@interface OtdChooseLocationViewController() <UIPickerViewDataSource,UIPickerViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIPickerView *locationPicker;
 
@@ -18,7 +18,7 @@
 
 @end
 
-@implementation OtdSettingsViewController
+@implementation OtdChooseLocationViewController
 
 - (void)viewDidLoad {
     [[OtdDataInterface sharedInstance] getAllLocations:^(NSArray *locations, NSError *error) {

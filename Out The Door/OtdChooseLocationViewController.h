@@ -1,5 +1,5 @@
 //
-//  settingsViewController.h
+//  OtdChooseLocationViewController.h
 //  Out The Door
 //
 //  Created by Emily Coco on 9/8/15.
@@ -12,6 +12,6 @@
 #import "OtdDataInterface.h"
 #import "OtdLocationModel.h"
 
-@interface OtdSettingsViewController : UIViewController
+@interface OtdChooseLocationViewController : UIViewController
 
 @end
