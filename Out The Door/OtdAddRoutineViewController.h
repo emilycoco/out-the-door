@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "OtdLocationModel.h"
+#import "OtdAddTasksViewController.h"
+#import "OtdChooseLocationViewController.h"
 
-@interface OtdAddRoutineViewController : UIViewController
+@interface OtdAddRoutineViewController : UIViewController <OtdAddTasksDelegate>
 
 @end

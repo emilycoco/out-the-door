@@ -12,6 +12,14 @@
 #import "OtdDataInterface.h"
 #import "OtdLocationModel.h"
 
+@protocol OtdAddLocationDelegate
+
+- (void)addLocation:(OtdLocationModel *)location;
+
+@end
+
 @interface OtdChooseLocationViewController : UIViewController
+
+@property (weak, nonatomic) id delegate;
 
 @end

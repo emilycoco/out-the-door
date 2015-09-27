@@ -14,6 +14,12 @@
 
 @property (strong, nonatomic) NSString *name;
 
+@property (nonatomic) NSString *destinationName;
+
+@property (nonatomic) NSTimeInterval timeToDestination;
+
+@property (strong, nonatomic) NSDate *arriveToDestination;
+
 @property (nonatomic) OtdLocationModel *location;
 
 @property (strong, nonatomic) NSDate *alarmTime;
@@ -22,6 +28,6 @@
 
 @property (strong, nonatomic) NSMutableArray *routineTasks;
 
-@property (nonatomic) NSCalendarUnit *daysToUse;
+@property (nonatomic) NSInteger daysToUse;
 
 @end

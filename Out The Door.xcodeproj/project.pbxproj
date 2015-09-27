@@ -27,7 +27,6 @@
 		385708BB1BAF4A32001E6713 /* OtdRoutineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 385708BA1BAF4A32001E6713 /* OtdRoutineModel.m */; };
 		385708BE1BAF5381001E6713 /* OtdRoutineTaskModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 385708BD1BAF5381001E6713 /* OtdRoutineTaskModel.m */; };
 		385708C61BAF6EB9001E6713 /* OtdAddTasksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 385708C51BAF6EB9001E6713 /* OtdAddTasksViewController.m */; };
-		385708C91BAFA17F001E6713 /* OtdRoutinePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 385708C81BAFA17F001E6713 /* OtdRoutinePageViewController.m */; };
 		38AACCAB1B9E3557004B49C3 /* OtdLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 38AACCAA1B9E3557004B49C3 /* OtdLocationManager.m */; };
 		38AACCAD1B9E3665004B49C3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38AACCAC1B9E3665004B49C3 /* MapKit.framework */; };
 /* End PBXBuildFile section */
@@ -79,8 +78,6 @@
 		385708BD1BAF5381001E6713 /* OtdRoutineTaskModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtdRoutineTaskModel.m; sourceTree = "<group>"; };
 		385708C41BAF6EB9001E6713 /* OtdAddTasksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtdAddTasksViewController.h; sourceTree = "<group>"; };
 		385708C51BAF6EB9001E6713 /* OtdAddTasksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtdAddTasksViewController.m; sourceTree = "<group>"; };
-		385708C71BAFA17F001E6713 /* OtdRoutinePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtdRoutinePageViewController.h; sourceTree = "<group>"; };
-		385708C81BAFA17F001E6713 /* OtdRoutinePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtdRoutinePageViewController.m; sourceTree = "<group>"; };
 		38AACCA91B9E354E004B49C3 /* OtdLocationManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OtdLocationManager.h; sourceTree = "<group>"; };
 		38AACCAA1B9E3557004B49C3 /* OtdLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtdLocationManager.m; sourceTree = "<group>"; };
 		38AACCAC1B9E3665004B49C3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -204,8 +201,6 @@
 				3844B0FF1BA953A1008DB4C2 /* OtdAddRoutineViewController.m */,
 				385708C41BAF6EB9001E6713 /* OtdAddTasksViewController.h */,
 				385708C51BAF6EB9001E6713 /* OtdAddTasksViewController.m */,
-				385708C71BAFA17F001E6713 /* OtdRoutinePageViewController.h */,
-				385708C81BAFA17F001E6713 /* OtdRoutinePageViewController.m */,
 			);
 			name = "routine views";
 			sourceTree = "<group>";
@@ -403,7 +398,6 @@
 				380051A81BA281DE00C06E47 /* OtdGeoFenceMananger.m in Sources */,
 				382D6A1C1B924E4800055A81 /* main.m in Sources */,
 				380051A51B9FDAA600C06E47 /* OtdChooseLocationViewController.m in Sources */,
-				385708C91BAFA17F001E6713 /* OtdRoutinePageViewController.m in Sources */,
 				380051AC1BA3C55100C06E47 /* locationConverter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

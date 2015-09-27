@@ -12,7 +12,7 @@
 
 @interface OtdDataInterface : NSObject
 
-//add new routine with properties:name, days to use, alarm time, otd time, location, location radius, things to do
+//add new routine with properties:name, days to use, alarm time, otd time, destination time, destination routine time, location, location radius, things to do
 //add new routine
 //add location
 //get all locations with completion block

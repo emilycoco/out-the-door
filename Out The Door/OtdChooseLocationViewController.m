@@ -14,7 +14,7 @@
 
 @property (nonatomic) NSArray *availableLocations;
 
-@property (weak, nonatomic) NSDictionary *selectedLocation;
+@property (weak, nonatomic) OtdLocationModel *selectedLocation;
 
 @end
 
@@ -54,7 +54,8 @@
 }
 
 - (IBAction)setLocation:(id)sender {
-    [[NSUserDefaults standardUserDefaults] setObject:self.selectedLocation forKey:@"preferredLocation"];
+//    [[NSUserDefaults standardUserDefaults] setObject:self.selectedLocation forKey:@"preferredLocation"];
+    [self.delegate addLocation:self.selectedLocation];
 }
 
 @end

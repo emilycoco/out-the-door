@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol OtdAddTasksDelegate
+
+- (void)addTasks:(NSMutableArray *)tasks;
+
+@end
+
 @interface OtdAddTasksViewController : UIViewController
+
+@property (weak, nonatomic) id delegate;
 
 @end

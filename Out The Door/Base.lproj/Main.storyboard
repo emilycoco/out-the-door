@@ -122,7 +122,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="cRW-po-mnG" kind="presentation" id="PUs-Ia-czt"/>
+                                    <segue destination="0NG-0U-TxI" kind="show" id="QHu-YL-Ewh"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -132,7 +132,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2G7-Oo-9bK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-47.5" y="206.5"/>
+            <point key="canvasLocation" x="10.5" y="414.5"/>
         </scene>
         <!--Otd Add Tasks View Controller-->
         <scene sceneID="2Qk-qy-kzB">
@@ -178,13 +178,13 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Task:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AKP-WD-lFf">
                                 <rect key="frame" x="16" y="156" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time it takes:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KT1-TU-bsY">
                                 <rect key="frame" x="71" y="190" width="112" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qxt-g7-zp1">
@@ -202,14 +202,13 @@
                                 <rect key="frame" x="16" y="238" width="343" height="375"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hlG-9a-ZMS">
-                                <rect key="frame" x="158" y="621" width="201" height="30"/>
-                                <state key="normal" title="Next Step: Choose Location">
-                                    <color key="titleColor" red="0.40828022200000003" green="0.52425986840000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJE-8y-t2q">
+                                <rect key="frame" x="145" y="629" width="85" height="30"/>
+                                <state key="normal" title="Add Tasks">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="3Nn-BR-Ups" kind="showDetail" id="juK-rg-1Hc"/>
+                                    <action selector="nextStep:" destination="rNf-PN-I1u" eventType="touchUpInside" id="Dal-n6-G7x"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -219,7 +218,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4aZ-Vy-or0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="416.5" y="-1259.5"/>
+            <point key="canvasLocation" x="10.5" y="-1089.5"/>
         </scene>
         <!--Otd Add Routine View Controller-->
         <scene sceneID="TB0-rk-pVR">
@@ -239,58 +238,26 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z65-jC-NPp">
-                                <rect key="frame" x="209" y="617" width="150" height="30"/>
-                                <state key="normal" title="Next Step: Add tasks">
-                                    <color key="titleColor" red="0.40828022200000003" green="0.52425986840000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="rNf-PN-I1u" kind="presentation" id="9c3-9D-RLy"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Where do you need to get to on time?" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lMd-ID-wQ8">
-                                <rect key="frame" x="16" y="163" width="182" height="50"/>
+                                <rect key="frame" x="16" y="109" width="182" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What time do you need to be there?" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KVa-3w-KVJ">
-                                <rect key="frame" x="16" y="244" width="164" height="46"/>
+                                <rect key="frame" x="16" y="167" width="164" height="46"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How long does it take to get there?" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9F8-ry-7hB">
-                                <rect key="frame" x="16" y="307" width="164" height="53"/>
+                                <rect key="frame" x="16" y="216" width="164" height="53"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TCh-sb-3J4">
-                                <rect key="frame" x="152" y="370" width="71" height="30"/>
-                                <state key="normal" title="Calculate">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Looks like you need to get out the door at..." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RWt-eS-Hpx">
-                                <rect key="frame" x="81" y="408" width="212" height="53"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8GV-e2-ttA">
-                                <rect key="frame" x="262" y="183" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bFJ-ic-Hkt">
-                                <rect key="frame" x="262" y="252" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Jl-7v-2cG">
-                                <rect key="frame" x="262" y="330" width="97" height="30"/>
+                                <rect key="frame" x="262" y="129" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -305,13 +272,51 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name this routine:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="adC-b2-MEm">
-                                <rect key="frame" x="16" y="93" width="182" height="50"/>
+                                <rect key="frame" x="16" y="66" width="182" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="403-5U-KKq">
-                                <rect key="frame" x="262" y="103" width="97" height="30"/>
+                                <rect key="frame" x="262" y="81" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJp-IL-7ai">
+                                <rect key="frame" x="16" y="292" width="80" height="30"/>
+                                <state key="normal" title="Add Tasks">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="rNf-PN-I1u" kind="show" identifier="addTasks" id="8SB-TU-waT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u5I-wf-nRc">
+                                <rect key="frame" x="16" y="325" width="123" height="30"/>
+                                <state key="normal" title="Choose Location">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="3Nn-BR-Ups" kind="show" identifier="chooseLocation" id="5Ug-SQ-AbD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uRG-pJ-0E9">
+                                <rect key="frame" x="136" y="597" width="102" height="30"/>
+                                <state key="normal" title="Save Routine">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveRoutine:" destination="0NG-0U-TxI" eventType="touchUpInside" id="2ia-ff-n77"/>
+                                </connections>
+                            </button>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="UMX-Nh-WUK">
+                                <rect key="frame" x="193" y="174" width="166" height="32"/>
+                                <date key="date" timeIntervalSinceReferenceDate="465024327.44507998">
+                                    <!--2015-09-27 05:25:27 +0000-->
+                                </date>
+                            </datePicker>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="alR-B0-uUh">
+                                <rect key="frame" x="251" y="231" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -319,43 +324,16 @@
                         <color key="backgroundColor" red="0.62955864289999997" green="0.95146398219999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="routineDestinationTextfield" destination="8GV-e2-ttA" id="7M9-WR-el9"/>
+                        <outlet property="routineDestinationTimeTextfield" destination="UMX-Nh-WUK" id="w22-XW-z5n"/>
+                        <outlet property="routineNameTextfield" destination="403-5U-KKq" id="F4V-6R-pEm"/>
+                        <outlet property="routineRouteTimeTextfield" destination="alR-B0-uUh" id="VOR-nA-ejQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WWf-uK-dtq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-53.5" y="-1259.5"/>
-        </scene>
-        <!--Otd Routine Page View Controller-->
-        <scene sceneID="p3W-7C-ZU4">
-            <objects>
-                <viewController id="cRW-po-mnG" customClass="OtdRoutinePageViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="hP6-Wn-HEh"/>
-                        <viewControllerLayoutGuide type="bottom" id="v8c-5Z-bEf"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="HFE-rL-3rg">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YyV-8z-7YF">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="757"/>
-                                <subviews>
-                                    <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="V9y-5M-iJ2">
-                                        <rect key="frame" x="168" y="495" width="39" height="37"/>
-                                    </pageControl>
-                                </subviews>
-                            </scrollView>
-                        </subviews>
-                        <color key="backgroundColor" red="0.40828022200000003" green="0.52425986840000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <connections>
-                        <outlet property="pageControl" destination="V9y-5M-iJ2" id="4PV-jK-U4X"/>
-                        <outlet property="scrollView" destination="YyV-8z-7YF" id="EMC-u2-yRk"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KjF-Am-dgF" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-47.5" y="-527.5"/>
+            <point key="canvasLocation" x="10.5" y="-343.5"/>
         </scene>
         <!--Otd Choose Location View Controller-->
         <scene sceneID="Bsd-iY-i8w">
@@ -399,16 +377,6 @@
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wf1-Io-hsB">
                                 <rect key="frame" x="93" y="274" width="188" height="125"/>
                             </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PMQ-LZ-cSf">
-                                <rect key="frame" x="142" y="396" width="91" height="30"/>
-                                <state key="normal" title="Set Location">
-                                    <color key="titleColor" red="0.40828022200000003" green="0.52425986840000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="setLocation:" destination="3Nn-BR-Ups" eventType="touchUpInside" id="dNb-2a-yDH"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CSS-ZI-eyu">
                                 <rect key="frame" x="311" y="29" width="48" height="30"/>
                                 <state key="normal" title="Cancel">
@@ -425,20 +393,20 @@
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zq5-bh-hbE">
-                                <rect key="frame" x="173" y="629" width="186" height="30"/>
-                                <state key="normal" title="Next Step: Save Routine">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="94g-PH-Tgb">
+                                <rect key="frame" x="140" y="629" width="99" height="30"/>
+                                <state key="normal" title="Add Location">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="pMs-y6-HrB" kind="presentation" id="UPc-gA-ydL"/>
+                                    <action selector="setLocation:" destination="3Nn-BR-Ups" eventType="touchUpInside" id="CZ8-kz-ivG"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.62955864289999997" green="0.95146398219999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="86p-di-oo9" firstAttribute="top" secondItem="Fk2-r5-hGJ" secondAttribute="bottom" constant="8" id="0wr-DG-pBF"/>
-                            <constraint firstItem="q9e-5W-d6U" firstAttribute="top" secondItem="86p-di-oo9" secondAttribute="bottom" constant="608" id="YcY-i0-gRC"/>
+                            <constraint firstItem="q9e-5W-d6U" firstAttribute="top" secondItem="86p-di-oo9" secondAttribute="bottom" constant="608" id="F1h-1A-Kbb"/>
+                            <constraint firstItem="86p-di-oo9" firstAttribute="top" secondItem="Fk2-r5-hGJ" secondAttribute="bottom" constant="8" id="UKw-FD-4IW"/>
                             <constraint firstItem="86p-di-oo9" firstAttribute="centerX" secondItem="XNe-l2-Ime" secondAttribute="centerX" id="enU-eI-i3W"/>
                         </constraints>
                     </view>
@@ -449,67 +417,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7hI-ps-L8V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="867.5" y="-1259.5"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="gfu-WH-6Lu">
-            <objects>
-                <viewController storyboardIdentifier="saveRoutineViewController" id="pMs-y6-HrB" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="SQS-aI-7y7"/>
-                        <viewControllerLayoutGuide type="bottom" id="8hG-oA-Iuk"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="xyE-xe-FZu">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Save Routine" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vi2-jd-IDV">
-                                <rect key="frame" x="113" y="28" width="149" height="31"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SxN-8Z-Cf3">
-                                <rect key="frame" x="311" y="29" width="48" height="30"/>
-                                <state key="normal" title="Cancel">
-                                    <color key="titleColor" red="0.40828022200000003" green="0.52425986840000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="close:" destination="3Nn-BR-Ups" eventType="touchUpInside" id="kry-Gu-TjX"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Routine Details" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Meo-dy-HkK">
-                                <rect key="frame" x="123" y="150" width="129" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Use This Routine On:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zkL-pz-rNs">
-                                <rect key="frame" x="24" y="201" width="166" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pPk-Y0-65b">
-                                <rect key="frame" x="249" y="198" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="61c-rj-FTn">
-                                <rect key="frame" x="140" y="334" width="94" height="30"/>
-                                <state key="normal" title="Save Routine">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="0.62955864289999997" green="0.95146398219999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9Me-z1-fwN" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1345.5" y="-1259.5"/>
+            <point key="canvasLocation" x="438.5" y="-1089.5"/>
         </scene>
         <!--Otd Add Location View Controller-->
         <scene sceneID="3oS-1F-7mn">
@@ -598,7 +506,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nd1-le-dBb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="867.5" y="-2025.5"/>
+            <point key="canvasLocation" x="438.5" y="-1847.5"/>
         </scene>
     </scenes>
 </document>
