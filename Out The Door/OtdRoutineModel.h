@@ -12,6 +12,8 @@
 
 @interface OtdRoutineModel : NSObject
 
+@property (strong, nonatomic) NSString *objectId;
+
 @property (strong, nonatomic) NSString *name;
 
 @property (nonatomic) NSString *destinationName;

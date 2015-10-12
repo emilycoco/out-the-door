@@ -1,31 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Vfg-QE-N72">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ciC-gT-dRm">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="tNm-da-qXL">
-            <objects>
-                <navigationController id="Vfg-QE-N72" sceneMemberID="viewController">
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dnS-hI-NGG">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="egp-ac-oTg"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CLe-lJ-MAJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-450.5" y="1167.5"/>
-        </scene>
-        <!--Otd Main View Controller-->
+        <!--Otd Home View-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="OtdMainViewController" sceneMemberID="viewController">
+                <viewController title="Otd Home View" id="vXZ-lx-hvc" customClass="OtdMainViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -34,51 +17,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Out The Door" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpS-7l-9gs">
-                                <rect key="frame" x="70" y="99" width="235" height="28"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="235" id="q3r-Ym-I8V"/>
-                                    <constraint firstAttribute="height" constant="28" id="zmd-pT-UUu"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KXA-c8-DEQ" customClass="GMSMapView">
-                                <rect key="frame" x="62" y="293" width="250" height="250"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KXA-c8-DEQ" customClass="GMSMapView">
+                                <rect key="frame" x="16" y="20" width="343" height="295"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Home" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jQW-JR-fUs">
+                                        <rect key="frame" x="33" y="209" width="119" height="26"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="KXA-c8-DEQ" secondAttribute="height" multiplier="1:1" id="9y5-GM-vIZ"/>
-                                    <constraint firstAttribute="width" constant="250" id="N8z-eL-JXB"/>
-                                </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Out the door text placeholder" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zrH-fl-Eun">
-                                <rect key="frame" x="29" y="197" width="317" height="21"/>
+                                <rect key="frame" x="64" y="401" width="246" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Home" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jQW-JR-fUs">
-                                <rect key="frame" x="22" y="551" width="330" height="26"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.62955864287382668" green="0.95146398215802785" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="centerX" secondItem="KXA-c8-DEQ" secondAttribute="centerX" id="6Bc-2e-FZr"/>
-                            <constraint firstItem="cpS-7l-9gs" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="35" id="HnA-Pg-8rM"/>
-                            <constraint firstAttribute="centerX" secondItem="cpS-7l-9gs" secondAttribute="centerX" id="St8-eM-hSb"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="KXA-c8-DEQ" secondAttribute="bottom" constant="124" id="gMk-i5-IGX"/>
-                        </constraints>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="home" id="crO-gZ-Nn4"/>
+                    <toolbarItems>
+                        <barButtonItem title="home" id="jat-wi-uqc"/>
+                        <barButtonItem title="routines" id="wPi-Cd-CWG"/>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" id="si8-gh-EFr">
-                        <barButtonItem key="leftBarButtonItem" title="Routines" id="f0o-BB-cie">
-                            <connections>
-                                <segue destination="JeG-VH-KkX" kind="presentation" id="S29-Xd-bBr"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="leftBarButtonItem" title="Routines" id="f0o-BB-cie"/>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -89,12 +55,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="10.5" y="1167.5"/>
+            <point key="canvasLocation" x="15.5" y="394.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Otd All Routines-->
         <scene sceneID="YLb-nH-ogW">
             <objects>
-                <viewController id="JeG-VH-KkX" sceneMemberID="viewController">
+                <viewController title="Otd All Routines" id="JeG-VH-KkX" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3oh-52-Zm4"/>
                         <viewControllerLayoutGuide type="bottom" id="m0W-Es-QoI"/>
@@ -125,14 +91,21 @@
                                     <segue destination="0NG-0U-TxI" kind="show" id="QHu-YL-Ewh"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZQX-Rp-tsg">
+                                <rect key="frame" x="16" y="10" width="46" height="30"/>
+                                <state key="normal" title="close">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.62955864289999997" green="0.95146398219999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="8y5-0G-1Di"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2G7-Oo-9bK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="10.5" y="414.5"/>
+            <point key="canvasLocation" x="-451.5" y="-1089.5"/>
         </scene>
         <!--Otd Add Tasks View Controller-->
         <scene sceneID="2Qk-qy-kzB">
@@ -152,6 +125,10 @@
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="SHb-Yw-55L">
+                                <rect key="frame" x="16" y="225" width="343" height="340"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="81n-TD-xba">
                                 <rect key="frame" x="71" y="152" width="288" height="30"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -160,7 +137,7 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ug-rN-53H">
                                 <rect key="frame" x="309" y="24" width="50" height="30"/>
-                                <state key="normal" title="Cancel">
+                                <state key="normal" title="close">
                                     <color key="titleColor" red="0.40828022200000003" green="0.52425986840000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -198,27 +175,37 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="SHb-Yw-55L">
-                                <rect key="frame" x="16" y="238" width="343" height="375"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJE-8y-t2q">
-                                <rect key="frame" x="145" y="629" width="85" height="30"/>
-                                <state key="normal" title="Add Tasks">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DNB-Fs-uFt">
+                                <rect key="frame" x="12" y="582" width="50" height="30"/>
+                                <state key="normal" title="cancel">
+                                    <color key="titleColor" red="0.40828022200000003" green="0.52425986840000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="nextStep:" destination="rNf-PN-I1u" eventType="touchUpInside" id="Dal-n6-G7x"/>
+                                    <action selector="close:" destination="rNf-PN-I1u" eventType="touchUpInside" id="1Sr-Jr-fvq"/>
+                                    <action selector="close:" destination="0NG-0U-TxI" eventType="touchUpInside" id="yad-wL-BDF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uTM-zJ-9Pm">
+                                <rect key="frame" x="315" y="580" width="50" height="30"/>
+                                <state key="normal" title="next">
+                                    <color key="titleColor" red="0.40828022200000003" green="0.52425986840000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="close:" destination="rNf-PN-I1u" eventType="touchUpInside" id="lSa-9C-tOF"/>
+                                    <action selector="close:" destination="0NG-0U-TxI" eventType="touchUpInside" id="uOu-DC-9IR"/>
+                                    <segue destination="3Nn-BR-Ups" kind="show" identifier="chooseLocation" id="u2r-d1-hdD"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.62955864289999997" green="0.95146398219999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4aZ-Vy-or0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="10.5" y="-1089.5"/>
+            <point key="canvasLocation" x="-52.5" y="-1809.5"/>
         </scene>
         <!--Otd Add Routine View Controller-->
         <scene sceneID="TB0-rk-pVR">
@@ -261,16 +248,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofV-Sn-fTR">
-                                <rect key="frame" x="309" y="24" width="50" height="30"/>
-                                <state key="normal" title="Cancel">
-                                    <color key="titleColor" red="0.40828022200000003" green="0.52425986840000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="close:" destination="rNf-PN-I1u" eventType="touchUpInside" id="87U-KG-jAy"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name this routine:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="adC-b2-MEm">
                                 <rect key="frame" x="16" y="66" width="182" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -282,33 +259,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJp-IL-7ai">
-                                <rect key="frame" x="16" y="292" width="80" height="30"/>
-                                <state key="normal" title="Add Tasks">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="rNf-PN-I1u" kind="show" identifier="addTasks" id="8SB-TU-waT"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u5I-wf-nRc">
-                                <rect key="frame" x="16" y="325" width="123" height="30"/>
-                                <state key="normal" title="Choose Location">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="3Nn-BR-Ups" kind="show" identifier="chooseLocation" id="5Ug-SQ-AbD"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uRG-pJ-0E9">
-                                <rect key="frame" x="136" y="597" width="102" height="30"/>
-                                <state key="normal" title="Save Routine">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="saveRoutine:" destination="0NG-0U-TxI" eventType="touchUpInside" id="2ia-ff-n77"/>
-                                </connections>
-                            </button>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="UMX-Nh-WUK">
                                 <rect key="frame" x="193" y="174" width="166" height="32"/>
                                 <date key="date" timeIntervalSinceReferenceDate="465024327.44507998">
@@ -320,8 +270,31 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dMi-we-vdx">
+                                <rect key="frame" x="317" y="580" width="50" height="30"/>
+                                <state key="normal" title="next">
+                                    <color key="titleColor" red="0.40828022200000003" green="0.52425986840000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="close:" destination="0NG-0U-TxI" eventType="touchUpInside" id="Fr4-QR-Zm0"/>
+                                    <action selector="close:" destination="rNf-PN-I1u" eventType="touchUpInside" id="xrt-wn-BOu"/>
+                                    <segue destination="rNf-PN-I1u" kind="show" identifier="addTasks" id="htf-04-OSy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofV-Sn-fTR">
+                                <rect key="frame" x="7" y="580" width="50" height="30"/>
+                                <state key="normal" title="cancel">
+                                    <color key="titleColor" red="0.40828022200000003" green="0.52425986840000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="close:" destination="rNf-PN-I1u" eventType="touchUpInside" id="87U-KG-jAy"/>
+                                    <action selector="close:" destination="0NG-0U-TxI" eventType="touchUpInside" id="VCL-SG-ovj"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.62955864289999997" green="0.95146398219999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -333,7 +306,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WWf-uK-dtq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="10.5" y="-343.5"/>
+            <point key="canvasLocation" x="-47.5" y="-1089.5"/>
         </scene>
         <!--Otd Choose Location View Controller-->
         <scene sceneID="Bsd-iY-i8w">
@@ -347,7 +320,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose A Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="86p-di-oo9">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Choose A Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="86p-di-oo9">
                                 <rect key="frame" x="90" y="28" width="194" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="194" id="wOk-A1-klB"/>
@@ -402,8 +375,32 @@
                                     <action selector="setLocation:" destination="3Nn-BR-Ups" eventType="touchUpInside" id="CZ8-kz-ivG"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nlO-gp-qOs">
+                                <rect key="frame" x="309" y="575" width="50" height="30"/>
+                                <state key="normal" title="next">
+                                    <color key="titleColor" red="0.40828022200000003" green="0.52425986840000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="close:" destination="0NG-0U-TxI" eventType="touchUpInside" id="1xL-6B-xBx"/>
+                                    <action selector="close:" destination="rNf-PN-I1u" eventType="touchUpInside" id="F7L-AU-VIx"/>
+                                    <action selector="nextStep:" destination="3Nn-BR-Ups" eventType="touchUpInside" id="Yw7-ao-VZ5"/>
+                                    <action selector="nextStep:" destination="rNf-PN-I1u" eventType="touchUpInside" id="bXg-bA-Zys"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tNk-s9-fTH">
+                                <rect key="frame" x="8" y="575" width="50" height="30"/>
+                                <state key="normal" title="cancel">
+                                    <color key="titleColor" red="0.40828022200000003" green="0.52425986840000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="close:" destination="0NG-0U-TxI" eventType="touchUpInside" id="2fz-j2-XsA"/>
+                                    <action selector="close:" destination="rNf-PN-I1u" eventType="touchUpInside" id="8DY-EP-H7k"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.62955864289999997" green="0.95146398219999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
                         <constraints>
                             <constraint firstItem="q9e-5W-d6U" firstAttribute="top" secondItem="86p-di-oo9" secondAttribute="bottom" constant="608" id="F1h-1A-Kbb"/>
                             <constraint firstItem="86p-di-oo9" firstAttribute="top" secondItem="Fk2-r5-hGJ" secondAttribute="bottom" constant="8" id="UKw-FD-4IW"/>
@@ -417,7 +414,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7hI-ps-L8V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="438.5" y="-1089.5"/>
+            <point key="canvasLocation" x="-52.5" y="-2545.5"/>
         </scene>
         <!--Otd Add Location View Controller-->
         <scene sceneID="3oS-1F-7mn">
@@ -486,7 +483,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.62955864289999997" green="0.95146398219999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
                         <constraints>
                             <constraint firstItem="IWo-q3-40J" firstAttribute="top" secondItem="PgL-bO-4kW" secondAttribute="bottom" constant="148" id="M3h-O4-f1H"/>
                             <constraint firstAttribute="centerX" secondItem="PgL-bO-4kW" secondAttribute="centerX" constant="5.5" id="dCw-SS-6cM"/>
@@ -506,7 +503,47 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nd1-le-dBb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="438.5" y="-1847.5"/>
+            <point key="canvasLocation" x="392.5" y="-2545.5"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="uRt-f4-1cb">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ciC-gT-dRm" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="gJh-uQ-64E">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="viewControllers" id="Byu-yL-iEz"/>
+                        <segue destination="Yvm-Fz-JjY" kind="relationship" relationship="viewControllers" id="emB-6a-lHo"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bEG-fs-y4Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-456.5" y="394.5"/>
+        </scene>
+        <!--routines-->
+        <scene sceneID="Ad0-QB-Zgw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Yvm-Fz-JjY" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="routines" id="yyJ-w7-hP2"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DOi-vN-LNS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="JeG-VH-KkX" kind="relationship" relationship="rootViewController" id="aMy-Tg-ErD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p1P-hd-GHh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-451.5" y="-359.5"/>
         </scene>
     </scenes>
 </document>

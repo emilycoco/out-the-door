@@ -53,9 +53,11 @@
     self.selectedLocation = [self.availableLocations objectAtIndex:row];
 }
 
-- (IBAction)setLocation:(id)sender {
-//    [[NSUserDefaults standardUserDefaults] setObject:self.selectedLocation forKey:@"preferredLocation"];
-    [self.delegate addLocation:self.selectedLocation];
+- (IBAction)nextStep:(id)sender {
+    self.routineModel.location = self.selectedLocation;
+    [[OtdDataInterface sharedInstance] saveRoutine:self.routineModel completion:^(BOOL success, PFObject *Routine, NSError *error) {
+
+    }];
 }
 
 @end

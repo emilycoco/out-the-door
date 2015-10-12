@@ -7,15 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@protocol OtdAddTasksDelegate
-
-- (void)addTasks:(NSMutableArray *)tasks;
-
-@end
+#import "OtdRoutineModel.h"
+#import "OtdDataInterface.h"
+#import "OtdChooseLocationViewController.h"
 
 @interface OtdAddTasksViewController : UIViewController
 
-@property (weak, nonatomic) id delegate;
+@property (nonatomic) OtdRoutineModel *routineModel;
 
 @end

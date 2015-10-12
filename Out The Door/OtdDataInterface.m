@@ -7,7 +7,6 @@
 //
 
 #import "OtdDataInterface.h"
-#import <Parse/Parse.h>
 
 @implementation OtdDataInterface
 
@@ -49,22 +48,35 @@
 
 }
 
--(void)addRoutine:(OtdRoutineModel *)routineModel completion:(void (^)(BOOL, NSError *))completionBlock {
+-(void)saveRoutine:(OtdRoutineModel *)routineModel completion:(void (^)(BOOL, PFObject *Routine, NSError *))completionBlock {
     PFObject *Routine = [PFObject objectWithClassName:@"Routine"];
-//    PFGeoPoint *locationPoint = [PFGeoPoint geoPointWithLatitude:routineModel.location.latitude longitude:routineModel.location.longitude];
+
     Routine[@"name"] = routineModel.name;
     Routine[@"destinationName"] = routineModel.destinationName;
     Routine[@"timeToDestination"] = [NSNumber numberWithDouble:routineModel.timeToDestination];
-    Routine[@"alarmTime"] = routineModel.alarmTime;
     Routine[@"otdTime"] = routineModel.otdTime;
     Routine[@"routineTasks"] = routineModel.routineTasks;
     Routine[@"daysToUse"] = [NSNumber numberWithDouble:routineModel.daysToUse];
-//    Routine[@"location"] = locationPoint;
+
+    if (!routineModel.alarmTime) {
+        Routine[@"alarmTime"] = [NSNull null];
+    } else {
+        Routine[@"alarmTime"] = routineModel.alarmTime;
+    }
+
+    if (!routineModel.location) {
+        Routine[@"location"] = [NSNull null];
+    } else {
+//        PFGeoPoint *locationPoint = [PFGeoPoint geoPointWithLatitude:routineModel.location.longitude longitude:routineModel.location.longitude];
+//            Routine[@"location"] = locationPoint;
+    }
+
     [Routine saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
-            completionBlock(YES, error);
+            NSLog(@"SAVE%@", Routine.objectId);
+            completionBlock(YES, Routine, error);
         } else {
-            completionBlock(NO, error);
+            completionBlock(NO, Routine, error);
         }
     }];
 }

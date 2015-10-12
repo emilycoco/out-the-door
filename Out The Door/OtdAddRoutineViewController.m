@@ -45,34 +45,39 @@
                                                                                                      options:0];
 }
 
-- (IBAction)saveRoutine:(id)sender {
-    [self saveRoutineData];
-    [[OtdDataInterface sharedInstance] addRoutine:self.routineModel completion:^(BOOL success, NSError *error) {
-
-    }];
-}
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    [self saveRoutineData];
-    if ([segue.identifier  isEqualToString:@"addTasks"]) {
-        OtdAddTasksViewController *vc =segue.destinationViewController;
-        vc.delegate = self;
-    } else if ([segue.identifier  isEqualToString:@"chooseLocation"]) {
-        OtdChooseLocationViewController *vc =segue.destinationViewController;
-        vc.delegate = self;
-    }
-}
-
-- (void)saveRoutineData {
+- (void)saveInitialData {
     self.routineModel.name = self.routineNameTextfield.text;
     self.routineModel.destinationName = self.routineDestinationTextfield.text;
     self.routineModel.timeToDestination = [self.routineRouteTimeTextfield.text doubleValue];
     self.routineModel.arriveToDestination = self.routineDestinationTimeTextfield.date;
+    self.routineModel.alarmTime = nil;
     self.routineModel.daysToUse = 0;
-    self.routineModel.otdTime = [[NSCalendar currentCalendar] dateByAddingUnit:NSCalendarUnitMinute
-                                                                         value:-60
-                                                                        toDate:[NSDate date]
-                                                                       options:0];
+    self.routineModel.otdTime = [NSDate date];
+    self.routineModel.location = nil;
+    self.routineModel.routineTasks = [[NSMutableArray alloc] init];
+    [[OtdDataInterface sharedInstance] saveRoutine:self.routineModel completion:^(BOOL success, PFObject *Routine, NSError *error) {
+        self.routineModel.objectId = Routine.objectId;
+    }];
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    [self saveInitialData];
+    if ([segue.identifier isEqualToString:@"addTasks"]) {
+        OtdAddTasksViewController *vc =segue.destinationViewController;
+        vc.routineModel = self.routineModel;
+    }
+}
+
+//- (void)saveRoutineData {
+//    self.routineModel.name = self.routineNameTextfield.text;
+//    self.routineModel.destinationName = self.routineDestinationTextfield.text;
+//    self.routineModel.timeToDestination = [self.routineRouteTimeTextfield.text doubleValue];
+//    self.routineModel.arriveToDestination = self.routineDestinationTimeTextfield.date;
+//    self.routineModel.daysToUse = 0;
+//    self.routineModel.otdTime = [[NSCalendar currentCalendar] dateByAddingUnit:NSCalendarUnitMinute
+//                                                                         value:-60
+//                                                                        toDate:[NSDate date]
+//                                                                       options:0];
+//}
 
 @end
